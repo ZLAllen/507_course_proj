@@ -1,0 +1,45 @@
+# vsim test -c -do "run -all" 
+# Start time: 20:44:47 on Nov 15,2016
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# //  ModelSim SE 10.4c Jul 19 2015 Linux 3.10.0-327.36.3.el7.x86_64
+# //
+# //  Copyright 1991-2015 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
+# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
+# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
+# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
+# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
+# //
+# Loading sv_std.std
+# Loading work.test(fast)
+# run -all
+# 156
+# y[    0] = fa52
+# y[    1] = 0a56
+# y[    2] = f9c0
+# y[    3] = d640
+# y[    0] = d8d8
+# y[    1] = 0a8e
+# y[    2] = e851
+# y[    3] = 0d0e
+# y[    0] = 066a
+# y[    1] = 0f65
+# y[    2] = dbf6
+# y[    3] = e5f1
+# y[    0] = 10dd
+# y[    1] = 239c
+# y[    2] = 2394
+# y[    3] = e4ac
+# y[    0] = 3156
+# y[    1] = dac4
+# y[    2] = 0c9c
+# y[    3] = 2852
+# ** Note: $finish    : testbench.sv(109)
+#    Time: 5095 ns  Iteration: 2  Instance: /test
+# End time: 20:44:47 on Nov 15,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0

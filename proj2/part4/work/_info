@@ -1,0 +1,110 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/home5/zli/ese507work/proj2/part4
+T_opt
+!s110 1478149919
+VJ12JM=e6h`XCV[D5XP1kI3
+04 4 4 work test fast 0
+=1-989096bd34a3-581ac71f-9f38-457c
+o-quiet -auto_acc_if_foreign -work work
+n@_opt
+OE;O;10.4c;61
+vmemory
+Z1 DXx6 sv_std 3 std 0 22 WmjPaeP=7F5?QFXzJ>D[Q2
+Z2 !s110 1478149906
+!i10b 1
+!s100 Ki7Mon[<Hzn`UZD`JkjIz3
+I3=`mGehkGC:g@_0e]UiS@2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+Z4 !s105 mac_p2part3_sv_unit
+S1
+R0
+Z5 w1478147040
+8memory.sv
+Fmemory.sv
+L0 1
+Z6 OE;L;10.4c;61
+r1
+!s85 0
+31
+Z7 !s108 1478149906.000000
+Z8 !s107 part2_mac.sv|memory.sv|mac_p2part3.sv|
+Z9 !s90 +acc|mac_p2part3.sv|
+!i113 0
+Z10 o+acc -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vmvm3_part3
+R1
+R2
+!i10b 1
+!s100 @5>HKXlzcN=Dd`1gII_GY3
+IkO0`H2mi9MEhPzJN3Ld]X0
+R3
+R4
+S1
+R0
+w1478149878
+8mac_p2part3.sv
+Fmac_p2part3.sv
+L0 4
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+vpart2_mac
+R1
+R2
+!i10b 1
+!s100 Z23?B^57UfNWOE1CL8KFj2
+IZa8@;1S2;dmfdgJNdQZVl0
+R3
+R4
+S1
+R0
+R5
+8part2_mac.sv
+Fpart2_mac.sv
+L0 4
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+vtest
+R1
+!s110 1478149902
+!i10b 1
+!s100 ;KNTZBTZXPMYM?eIJ<8e>3
+II><jB[6Tk;WXo]f^:<eb32
+R3
+!s105 testbench_sv_unit
+S1
+R0
+R5
+8testbench.sv
+Ftestbench.sv
+L0 6
+R6
+r1
+!s85 0
+31
+!s108 1478149902.000000
+!s107 testbench.sv|
+!s90 +acc|testbench.sv|
+!i113 0
+R10

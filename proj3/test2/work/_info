@@ -1,0 +1,142 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/home5/zli/ese507work/proj3/test2
+T_opt
+!s110 1480224315
+V:2C43Q`ElB3?=0m@m:7QO0
+Z1 04 4 4 work test fast 0
+=1-989096bc0efb-583a6e3b-4ad64-7aac
+Z2 o-quiet -auto_acc_if_foreign -work work
+n@_opt
+Z3 OE;O;10.4c;61
+T_opt1
+!s110 1480218344
+Vabg5BMUK]P1TcPOAUT0C]3
+R1
+=1-989096bc0efb-583a56e8-621a2-6ec4
+R2
+n@_opt1
+R3
+R0
+vctrlpath
+Z4 DXx6 sv_std 3 std 0 22 WmjPaeP=7F5?QFXzJ>D[Q2
+Z5 !s110 1480224281
+!i10b 1
+!s100 bMKHabU^5:P^>7`n3=5No1
+Ia;Q@;Ai9IY5T:MF>GV<0j1
+Z6 VDg1SIo80bB@j0V0VzS_@n1
+Z7 !s105 proj22dpart32dref_sv_unit
+S1
+R0
+Z8 w1480224092
+Z9 8proj2-part3-ref.sv
+Z10 Fproj2-part3-ref.sv
+L0 97
+Z11 OE;L;10.4c;61
+r1
+!s85 0
+31
+Z12 !s108 1480224281.000000
+Z13 !s107 proj2-part3-ref.sv|
+Z14 !s90 +acc|proj2-part3-ref.sv|
+!i113 0
+Z15 o+acc -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vdatapath
+R4
+R5
+!i10b 1
+!s100 nMfDgLR]mi<g8PzFMSXXF1
+IcDIHgU`^DIhMCfCAh@OzR0
+R6
+R7
+S1
+R0
+R8
+R9
+R10
+L0 40
+R11
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 0
+R15
+vmemory
+R4
+R5
+!i10b 1
+!s100 Zj[VX5Ci7PNTNn?zbI5z71
+I@IMkKZ8HkiOR^oE2EYEWb1
+R6
+R7
+S1
+R0
+R8
+R9
+R10
+L0 26
+R11
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 0
+R15
+vmvm3_part3
+R4
+R5
+!i10b 1
+!s100 oDcm6L_aUfS3E2N3:]ggm2
+IfFZ[_cUHfgNd]7cC;GB8=1
+R6
+R7
+S1
+R0
+R8
+R9
+R10
+L0 4
+R11
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 0
+R15
+vtest
+R4
+!s110 1480224284
+!i10b 1
+!s100 k2[?AjiE7^<IFT;lPYMTe1
+IaV8@6CocY9;G5Y;0_Cf=82
+R6
+!s105 testbench_sv_unit
+S1
+R0
+w1480221329
+8testbench.sv
+Ftestbench.sv
+L0 6
+R11
+r1
+!s85 0
+31
+!s108 1480224284.000000
+!s107 testbench.sv|
+!s90 +acc|testbench.sv|
+!i113 0
+R15

@@ -1,0 +1,296 @@
+
+                      Design Compiler Graphical
+                            DC Ultra (TM)
+                             DFTMAX (TM)
+                         Power Compiler (TM)
+                           DesignWare (R)
+                           DC Expert (TM)
+                         Design Vision (TM)
+                          HDL Compiler (TM)
+                         VHDL Compiler (TM)
+                            DFT Compiler
+                        Library Compiler (TM)
+                         Design Compiler(R)
+
+         Version J-2014.09-SP5-2 for RHEL64 -- Jul 11, 2015
+               Copyright (c) 1988-2015 Synopsys, Inc.
+
+This software and the associated documentation are confidential and 
+proprietary to Synopsys, Inc. Your use or disclosure of this software 
+is subject to the terms and conditions of a written license agreement 
+between you, or your company, and Synopsys, Inc.
+
+Initializing...
+##############################################
+# Setup: fill out the following parameters: name of clock signal, clock period (ns),
+# reset signal name (if used), name of top-level module, name of source file
+set CLK_NAME "";
+set CLK_PERIOD 0;
+0
+set RST_NAME "";
+set TOP_MOD_NAME "mod2";
+mod2
+set SRC_FILE "test.sv";
+test.sv
+###############################################
+source setupdc.tcl
+NangateOpenCellLibrary_typical.db dw_foundation.sldb
+file mkdir work_synth
+define_design_lib WORK -path work_synth
+1
+analyze $SRC_FILE -format sverilog
+Running PRESTO HDLC
+Searching for ./test.sv
+Compiling source file ./test.sv
+Presto compilation completed successfully.
+Loading db file '/home/home4/pmilder/ese507/synthesis/lib/NangateOpenCellLibrary_typical.db'
+Loading db file '/usr/local/synopsys/syn/libraries/syn/dw_foundation.sldb'
+1
+elaborate -work WORK $TOP_MOD_NAME
+Loading db file '/usr/local/synopsys/syn/libraries/syn/gtech.db'
+Loading db file '/usr/local/synopsys/syn/libraries/syn/standard.sldb'
+  Loading link library 'NangateOpenCellLibrary'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'mod2'.
+1
+###### CLOCKS AND PORTS #######
+#set CLK_PORT [get_ports $CLK_NAME]
+#set TMP1 [remove_from_collection [all_inputs] $CLK_PORT]
+#set INPUTS [remove_from_collection $TMP1 $RST_NAME]
+#create_clock -period $CLK_PERIOD [get_ports clk]
+# set delay for inputs to be 0.2ns
+#set_input_delay 0.2 -max -clock clk $INPUTS
+#set_output_delay 0.2 -max -clock clk [all_outputs]
+check_design
+1
+###### OPTIMIZATION #######
+set_max_area 0 
+1
+###### RUN #####
+compile
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | J-2014.09-DWBB_201409.5.2
+                                                               |     *     |
+| Licensed DW Building Blocks        | J-2014.09-DWBB_201409.5.2
+                                                               |           |
+============================================================================
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'mod2'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Structuring 'mod2'
+  Mapping 'mod2'
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:00       3.5      0.00       0.0       0.0                          
+    0:00:00       3.5      0.00       0.0       0.0                          
+    0:00:00       3.5      0.00       0.0       0.0                          
+    0:00:00       3.5      0.00       0.0       0.0                          
+    0:00:00       3.5      0.00       0.0       0.0                          
+    0:00:00       3.5      0.00       0.0       0.0                          
+    0:00:00       3.5      0.00       0.0       0.0                          
+    0:00:00       3.5      0.00       0.0       0.0                          
+    0:00:00       3.5      0.00       0.0       0.0                          
+    0:00:00       3.5      0.00       0.0       0.0                          
+    0:00:00       3.5      0.00       0.0       0.0                          
+    0:00:00       3.5      0.00       0.0       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:00       3.5      0.00       0.0       0.0                          
+    0:00:00       3.5      0.00       0.0       0.0                          
+    0:00:00       3.5      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (max_area 0)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:00       3.5      0.00       0.0       0.0                          
+    0:00:00       3.5      0.00       0.0       0.0                          
+    0:00:00       3.5      0.00       0.0       0.0                          
+    0:00:00       3.5      0.00       0.0       0.0                          
+    0:00:00       3.5      0.00       0.0       0.0                          
+    0:00:00       3.5      0.00       0.0       0.0                          
+    0:00:00       3.5      0.00       0.0       0.0                          
+    0:00:00       3.5      0.00       0.0       0.0                          
+    0:00:00       3.5      0.00       0.0       0.0                          
+    0:00:00       3.5      0.00       0.0       0.0                          
+    0:00:00       3.5      0.00       0.0       0.0                          
+    0:00:00       3.5      0.00       0.0       0.0                          
+    0:00:00       3.5      0.00       0.0       0.0                          
+    0:00:00       3.5      0.00       0.0       0.0                          
+    0:00:00       3.5      0.00       0.0       0.0                          
+    0:00:00       3.5      0.00       0.0       0.0                          
+    0:00:00       3.5      0.00       0.0       0.0                          
+Loading db file '/home/home4/pmilder/ese507/synthesis/lib/NangateOpenCellLibrary_typical.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+1
+report_area
+ 
+****************************************
+Report : area
+Design : mod2
+Version: J-2014.09-SP5-2
+Date   : Mon Oct  3 11:03:12 2016
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /home/home4/pmilder/ese507/synthesis/lib/NangateOpenCellLibrary_typical.db)
+
+Number of ports:                            5
+Number of nets:                             7
+Number of cells:                            5
+Number of combinational cells:              5
+Number of sequential cells:                 0
+Number of macros/black boxes:               0
+Number of buf/inv:                          2
+Number of references:                       3
+
+Combinational area:                  3.458000
+Buf/Inv area:                        1.064000
+Noncombinational area:               0.000000
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                     3.458000
+Total area:                 undefined
+1
+report_power
+Loading db file '/home/home4/pmilder/ese507/synthesis/lib/NangateOpenCellLibrary_typical.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: There is no defined clock in the design. (PWR-80)
+Warning: Design has unannotated primary inputs. (PWR-414)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : mod2
+Version: J-2014.09-SP5-2
+Date   : Mon Oct  3 11:03:12 2016
+****************************************
+
+
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /home/home4/pmilder/ese507/synthesis/lib/NangateOpenCellLibrary_typical.db)
+
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+Design        Wire Load Model            Library
+------------------------------------------------
+mod2                   5K_hvratio_1_1    NangateOpenCellLibrary
+
+
+Global Operating Voltage = 1.1  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+  Cell Internal Power  = 597.9311 nW   (47%)
+  Net Switching Power  = 668.7980 nW   (53%)
+                         ---------
+Total Dynamic Power    =   1.2667 uW  (100%)
+
+Cell Leakage Power     =  88.4988 nW
+
+Information: report_power power group summary does not include estimated clock tree power. (PWR-789)
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register           0.0000            0.0000            0.0000            0.0000  (   0.00%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational      0.5979            0.6688           88.4988            1.3552  ( 100.00%)
+--------------------------------------------------------------------------------------------------
+Total              0.5979 uW         0.6688 uW        88.4988 nW         1.3552 uW
+1
+report_timing
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : mod2
+Version: J-2014.09-SP5-2
+Date   : Mon Oct  3 11:03:12 2016
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: a (input port)
+  Endpoint: d (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  mod2               5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 f
+  a (in)                                   0.00       0.00 f
+  U11/ZN (INV_X1)                          0.03       0.03 r
+  U8/ZN (NAND2_X1)                         0.03       0.06 f
+  d (out)                                  0.00       0.06 f
+  data arrival time                                   0.06
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
+write -f verilog $TOP_MOD_NAME -output gates.v -hierarchy
+Writing verilog file '/home/home5/zli/ese507work/proj1/part1/q3/gates.v'.
+1
+quit
+
+Thank you...

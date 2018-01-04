@@ -1,0 +1,181 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/home5/zli/ese507work/proj3/part1
+T_opt
+!s110 1481280393
+V:WHi]T6>`k0ZYGm]NAMSb2
+04 19 4 work tb_layer_13_16_1_32 fast 0
+=1-989096bd34a3-584a8b89-37f49-10ba
+o-quiet -auto_acc_if_foreign -work work
+n@_opt
+OE;O;10.4c;61
+vctrlpath
+Z1 DXx6 sv_std 3 std 0 22 WmjPaeP=7F5?QFXzJ>D[Q2
+Z2 !s110 1481280392
+!i10b 1
+!s100 >A<]]Hjl3O4B^3TRJUQ]:3
+I_Tleg]keTaF>nhlGQdKfW3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+Z4 !s105 layer_13_16_1_32_sv_unit
+S1
+R0
+Z5 w1481280374
+Z6 8layer_13_16_1_32.sv
+Z7 Flayer_13_16_1_32.sv
+L0 124
+Z8 OE;L;10.4c;61
+r1
+!s85 0
+31
+Z9 !s108 1481280392.000000
+Z10 !s107 tb_layer_13_16_1_32.sv|layer_13_16_1_32.sv|
+Z11 !s90 layer_13_16_1_32.sv|tb_layer_13_16_1_32.sv|
+!i113 0
+Z12 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vdatapath
+R1
+R2
+!i10b 1
+!s100 ;>L<>ZnVVhbGX=C9Vi78b2
+IhnTZC5^5olH^geZcF2dg72
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 44
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+vlayer_13_16_1_32
+R1
+R2
+!i10b 1
+!s100 ffJgK99NT@`G52JiWB[gI3
+I2c=U1:TbC027`czE>Qc3V1
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 4
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+vlayer_13_16_1_32_B_rom
+R1
+R2
+!i10b 1
+!s100 NWUz00Y5Th3??H7<J9W5E1
+IR20L16J7B>BYP`@>]ILiE2
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 550
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+nlayer_13_16_1_32_@b_rom
+vlayer_13_16_1_32_W_rom
+R1
+R2
+!i10b 1
+!s100 2C`P[k7aS`7LeMfSPj;aA3
+I;i4n3Z@zVlF`SIY=3?chB0
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 332
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+nlayer_13_16_1_32_@w_rom
+vmemory
+R1
+R2
+!i10b 1
+!s100 aAcKn<d269m:6=CcRI<_X0
+IOTbXFa5@k2az^9dgM1mXM2
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 30
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+vtb_layer_13_16_1_32
+R1
+R2
+!i10b 1
+!s100 McRW`e__?Nc_Pdf5OKS@h1
+I`1GX2zF9CmRiL5@Ak26HO1
+R3
+!s105 tb_layer_13_16_1_32_sv_unit
+S1
+R0
+R5
+8tb_layer_13_16_1_32.sv
+Ftb_layer_13_16_1_32.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12

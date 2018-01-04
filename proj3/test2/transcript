@@ -1,0 +1,76 @@
+# //  ModelSim SE 10.4c Jul 19 2015 Linux 3.10.0-327.28.2.el7.x86_64
+# //
+# //  Copyright 1991-2015 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
+# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
+# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
+# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
+# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
+# //
+# vsim test 
+# Start time: 00:25:15 on Nov 27,2016
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 1 FSM in module "ctrlpath(fast)".
+# Loading sv_std.std
+# Loading work.test(fast)
+# Loading work.mvm3_part3(fast)
+# Loading work.datapath(fast)
+# Loading work.memory(fast)
+# Loading work.memory(fast__1)
+# Loading work.ctrlpath(fast)
+add wave -position end sim:/test/dut/d/#ALWAYS#81/*
+add wave -position end sim:/test/dut/d/clear_acc_delay/*
+# (vish-4014) No objects found matching 'sim:/test/dut/d/clear_acc_delay/*'.
+add wave -position end sim:/test/dut/d/delay/*
+# (vish-4014) No objects found matching 'sim:/test/dut/d/delay/*'.
+add wave -position end sim:/test/dut/d/addr_w/*
+# (vish-4014) No objects found matching 'sim:/test/dut/d/addr_w/*'.
+add wave -position end sim:/test/dut/d/addr_b/*
+# (vish-4014) No objects found matching 'sim:/test/dut/d/addr_b/*'.
+add wave -position end sim:/test/dut/d/addr_x/*
+# (vish-4014) No objects found matching 'sim:/test/dut/d/addr_x/*'.
+add wave -position end sim:/test/dut/d/mul_out_save/*
+# (vish-4014) No objects found matching 'sim:/test/dut/d/mul_out_save/*'.
+add wave -position end sim:/test/dut/d/adder/*
+# (vish-4014) No objects found matching 'sim:/test/dut/d/adder/*'.
+add wave -position end sim:/test/dut/d/mul_out/*
+# (vish-4014) No objects found matching 'sim:/test/dut/d/mul_out/*'.
+add wave -position end sim:/test/dut/d/f/*
+# (vish-4014) No objects found matching 'sim:/test/dut/d/f/*'.
+add wave -position end sim:/test/dut/d/data_out_b/*
+# (vish-4014) No objects found matching 'sim:/test/dut/d/data_out_b/*'.
+add wave -position end sim:/test/dut/d/data_out_w/*
+# (vish-4014) No objects found matching 'sim:/test/dut/d/data_out_w/*'.
+add wave -position end sim:/test/dut/d/data_out_x/*
+# (vish-4014) No objects found matching 'sim:/test/dut/d/data_out_x/*'.
+add wave -position end sim:/test/dut/d/data_out/*
+# (vish-4014) No objects found matching 'sim:/test/dut/d/data_out/*'.
+add wave -position end sim:/test/dut/c/#ALWAYS#172/*
+run -all
+# 232
+# y[    0] = 0332
+# y[    1] = f21d
+# y[    2] = ec61
+# y[    0] = d582
+# y[    1] = d980
+# y[    2] = f8bf
+# y[    0] = 0766
+# y[    1] = 0bf9
+# y[    2] = f362
+# y[    0] = 0821
+# y[    1] = e5f6
+# y[    2] = ed10
+# y[    0] = 0b9a
+# y[    1] = 09ff
+# y[    2] = e900
+# ** Note: $finish    : testbench.sv(109)
+#    Time: 2535 ns  Iteration: 2  Instance: /test
+# 1
+# Break in Module test at testbench.sv line 109
+# End time: 00:33:01 on Nov 27,2016, Elapsed time: 0:07:46
+# Errors: 13, Warnings: 0

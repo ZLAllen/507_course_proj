@@ -1,0 +1,42 @@
+# //  ModelSim SE 10.4c Jul 19 2015 Linux 3.10.0-327.28.2.el7.x86_64
+# //
+# //  Copyright 1991-2015 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
+# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
+# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
+# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
+# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
+# //
+# vsim tbench 
+# Start time: 17:46:14 on Sep 08,2016
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading sv_std.std
+# Loading work.tbench(fast)
+# Loading work.myAdder(fast)
+# Loading work.DFF_X1(fast)
+# Loading work.NAND2_X1(fast)
+# Loading work.AND2_X1(fast)
+# Loading work.OR2_X1(fast)
+# Loading work.INV_X1(fast)
+# Loading work.CLKBUF_X1(fast)
+# Loading work.XNOR2_X1(fast)
+# Loading work.XOR2_X1(fast)
+# Loading work.BUF_X1(fast)
+# Loading work.OAI21_X1(fast)
+# ** Warning: (vsim-3017) gates.v(11): [TFMPC] - Too few port connections. Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /tbench/dut/\z_reg[4]  File: /home/home4/pmilder/ese507/synthesis/verilog/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) gates.v(12): [TFMPC] - Too few port connections. Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /tbench/dut/\z_reg[3]  File: /home/home4/pmilder/ese507/synthesis/verilog/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) gates.v(13): [TFMPC] - Too few port connections. Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /tbench/dut/\z_reg[2]  File: /home/home4/pmilder/ese507/synthesis/verilog/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) gates.v(14): [TFMPC] - Too few port connections. Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /tbench/dut/\z_reg[1]  File: /home/home4/pmilder/ese507/synthesis/verilog/NangateOpenCellLibrary.v
+# ** Warning: (vsim-3017) gates.v(15): [TFMPC] - Too few port connections. Expected 4, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /tbench/dut/\z_reg[0]  File: /home/home4/pmilder/ese507/synthesis/verilog/NangateOpenCellLibrary.v
+# End time: 17:46:18 on Sep 08,2016, Elapsed time: 0:00:04
+# Errors: 0, Warnings: 5

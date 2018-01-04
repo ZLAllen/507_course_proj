@@ -1,0 +1,44 @@
+# //  ModelSim SE 10.4c Jul 19 2015 Linux 3.10.0-327.13.1.el7.x86_64
+# //
+# //  Copyright 1991-2015 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
+# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
+# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
+# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
+# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
+# //
+# vsim tb_part2_mac 
+# Start time: 11:18:38 on Oct 03,2016
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# Loading sv_std.std
+# Loading work.tb_part2_mac(fast)
+# Loading work.part2_mac(fast)
+add wave -position end sim:/tb_part2_mac/dut/*
+run -all
+# valid_out = 0. Expected value is 0.
+# f =      0. Expected value is 0.
+# valid_out = 0. Expected value is 0.
+# f =      0. Expected value is 0.
+# valid_out = 0. Expected value is 0.
+# f =      0. Expected value is 0.
+# valid_out = 1. Expected value is 1.
+# f =      4. Expected value is 4.
+# valid_out = 1. Expected value is 1.
+# f =     13. Expected value is 13.
+# valid_out = 0. Expected value is 0.
+# f =     13. Expected value is 13.
+# valid_out = 0. Expected value is 0.
+# f =     13. Expected value is 13.
+# valid_out = 1. Expected value is 1.
+# f =     49. Expected value is 49.
+# ** Note: $finish    : part2_mac_tb_simple.sv(87)
+#    Time: 96 ns  Iteration: 0  Instance: /tb_part2_mac
+# 1
+# Break in Module tb_part2_mac at part2_mac_tb_simple.sv line 87
+# End time: 11:23:03 on Oct 03,2016, Elapsed time: 0:04:25
+# Errors: 0, Warnings: 0

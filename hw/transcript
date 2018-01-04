@@ -1,0 +1,44 @@
+# //  ModelSim SE 10.4c Jul 19 2015 Linux 3.10.0-327.28.2.el7.x86_64
+# //
+# //  Copyright 1991-2015 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
+# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
+# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
+# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
+# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
+# //
+# vsim test 
+# Start time: 17:49:25 on Sep 08,2016
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.test(fast)
+# Loading work.alu(fast)
+add wave -position end sim:/test/*
+run -all
+#                    0 in0 =    0 (00), in1 =    0 (00), op = 000, out =    0 (00)
+#                    1 in0 =   12 (0c), in1 =   -4 (fc), op = 000, out =    8 (08)
+#                    2 in0 =   12 (0c), in1 =    4 (04), op = 000, out =   16 (10)
+#                    3 in0 =   12 (0c), in1 =   -4 (fc), op = 001, out =   16 (10)
+#                    4 in0 =   85 (55), in1 =  -16 (f0), op = 010, out =   80 (50)
+#                    5 in0 =   85 (55), in1 =  -16 (f0), op = 011, out =  -11 (f5)
+#                    6 in0 =   85 (55), in1 =  -16 (f0), op = 100, out =  -91 (a5)
+#                    7 in0 =   85 (55), in1 =  -16 (f0), op = 101, out =    0 (00)
+# ** Note: $finish    : comb_alu.sv(76)
+#    Time: 8 ns  Iteration: 0  Instance: /test
+# 1
+# Break in Module test at comb_alu.sv line 76
+wave zoom full
+# {0 ns} {8 ns}
+wave zoom fit
+# unknown or ambiguous subcommand "fit": must be cursor, full, in, last, out, or range
+wave zoom full
+# {0 ns} {8 ns}
+quit -sim
+# End time: 18:06:44 on Sep 08,2016, Elapsed time: 0:17:19
+# Errors: 1, Warnings: 0
+# Load canceled

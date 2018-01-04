@@ -1,0 +1,71 @@
+# //  ModelSim SE 10.4c Jul 19 2015 Linux 3.10.0-327.36.3.el7.x86_64
+# //
+# //  Copyright 1991-2015 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
+# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
+# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
+# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
+# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
+# //
+# vsim tb_network_4_8_12_16_3_16 
+# Start time: 17:13:09 on Dec 07,2016
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 1 FSM in module "layer1_8_4_1_16_ctrlpath(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "layer2_12_8_1_16_ctrlpath(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "layer3_16_12_1_16_ctrlpath(fast)".
+# Loading sv_std.std
+# Loading work.tb_network_4_8_12_16_3_16(fast)
+# Loading work.network_4_8_12_16_3_16(fast)
+# Loading work.layer1_8_4_1_16(fast)
+# Loading work.memory(fast)
+# Loading work.layer1_8_4_1_16_W_rom_0(fast)
+# Loading work.layer1_8_4_1_16_B_rom_0(fast)
+# Loading work.layer1_8_4_1_16_datapath(fast)
+# Loading work.layer1_8_4_1_16_ctrlpath(fast)
+# Loading work.layer2_12_8_1_16(fast)
+# Loading work.memory(fast__1)
+# Loading work.layer2_12_8_1_16_W_rom_0(fast)
+# Loading work.layer2_12_8_1_16_B_rom_0(fast)
+# Loading work.layer2_12_8_1_16_datapath(fast)
+# Loading work.layer2_12_8_1_16_ctrlpath(fast)
+# Loading work.layer3_16_12_1_16(fast)
+# Loading work.memory(fast__2)
+# Loading work.layer3_16_12_1_16_W_rom_0(fast)
+# Loading work.layer3_16_12_1_16_B_rom_0(fast)
+# Loading work.layer3_16_12_1_16_datapath(fast)
+# Loading work.layer3_16_12_1_16_ctrlpath(fast)
+add wave -position end sim:/tb_network_4_8_12_16_3_16/dut/*
+run 50000
+add wave -position end sim:/tb_network_4_8_12_16_3_16/dut/layer1/*
+retart
+# invalid command name "retart"
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.tb_network_4_8_12_16_3_16(fast)
+# Loading work.network_4_8_12_16_3_16(fast)
+# Loading work.layer1_8_4_1_16(fast)
+# Loading work.memory(fast)
+# Loading work.layer1_8_4_1_16_W_rom_0(fast)
+# Loading work.layer1_8_4_1_16_B_rom_0(fast)
+# Loading work.layer1_8_4_1_16_datapath(fast)
+# Loading work.layer1_8_4_1_16_ctrlpath(fast)
+# Loading work.layer2_12_8_1_16(fast)
+# Loading work.memory(fast__1)
+# Loading work.layer2_12_8_1_16_W_rom_0(fast)
+# Loading work.layer2_12_8_1_16_B_rom_0(fast)
+# Loading work.layer2_12_8_1_16_datapath(fast)
+# Loading work.layer2_12_8_1_16_ctrlpath(fast)
+# Loading work.layer3_16_12_1_16(fast)
+# Loading work.memory(fast__2)
+# Loading work.layer3_16_12_1_16_W_rom_0(fast)
+# Loading work.layer3_16_12_1_16_B_rom_0(fast)
+# Loading work.layer3_16_12_1_16_datapath(fast)
+# Loading work.layer3_16_12_1_16_ctrlpath(fast)
+run 10000
+# End time: 17:21:23 on Dec 07,2016, Elapsed time: 0:08:14
+# Errors: 1, Warnings: 0

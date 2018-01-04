@@ -1,0 +1,49 @@
+# //  ModelSim SE 10.4c Jul 19 2015 Linux 3.10.0-327.36.3.el7.x86_64
+# //
+# //  Copyright 1991-2015 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
+# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
+# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
+# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
+# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
+# //
+# vsim test 
+# Start time: 19:34:52 on Dec 05,2016
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 1 FSM in module "mvm3_part1(fast)".
+# Loading sv_std.std
+# Loading work.test(fast)
+# Loading work.mvm3_part1(fast)
+# Loading work.memory(fast)
+# Loading work.memory(fast__1)
+# Loading work.part2_mac(fast)
+add wave -position end sim:/test/dut/*
+run -all
+# Small example: correct output is 18, 27, 36
+#  72
+# y[    0] = 05ba
+# y[    1] = 0904
+# y[    2] = fb48
+# y[    0] = 0c0f
+# y[    1] = f97f
+# y[    2] = f6e4
+# y[    0] = f49b
+# y[    1] = 1c77
+# y[    2] = fa1e
+# y[    0] = 01ed
+# y[    1] = e3f7
+# y[    2] = d8cf
+# y[    0] = ef39
+# y[    1] = 1e56
+# y[    2] = fa9d
+# ** Note: $finish    : testbench.sv(109)
+#    Time: 2805 ns  Iteration: 2  Instance: /test
+# 1
+# Break in Module test at testbench.sv line 109
+# End time: 19:35:29 on Dec 05,2016, Elapsed time: 0:00:37
+# Errors: 0, Warnings: 0

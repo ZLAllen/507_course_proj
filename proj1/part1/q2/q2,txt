@@ -1,0 +1,1 @@
+The synthesis will generate multiple latches for g0, g1, g2, g3. This happens because there aren't default assignment for all output ports undeer any condition. A quick fix will be inserting a default assignment to all ports at the beginning of the alway_comb block: {g0,g1,g2,g3} = 4'bx;

@@ -1,0 +1,72 @@
+# //  ModelSim SE 10.4c Jul 19 2015 Linux 3.10.0-327.13.1.el7.x86_64
+# //
+# //  Copyright 1991-2015 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
+# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
+# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
+# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
+# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
+# //
+# vsim test 
+# Start time: 14:24:25 on Oct 03,2016
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.test(fast)
+# Loading work.part3_mac(fast)
+add wave -position end sim:/test/*
+run -all
+# valid_out = 0. Expected value is 0.
+# f =      0. Expected value is 0.
+# valid_out = 0. Expected value is 0.
+# f =      0. Expected value is 0.
+# valid_out = 0. Expected value is 0.
+# f =      0. Expected value is      0.
+# valid_out = 0. Expected value is 0.
+# f =      0. Expected value is      0.
+# valid_out = 1. Expected value is 1.
+# f =   3619. Expected value is   3619.
+# valid_out = 1. Expected value is 1.
+# f =    559. Expected value is    559.
+# valid_out = 1. Expected value is 1.
+# f =    608. Expected value is    608.
+# valid_out = 1. Expected value is 1.
+# f =   3610. Expected value is   3610.
+# valid_out = 0. Expected value is 0.
+# f =   3610. Expected value is   3610.
+# valid_out = 0. Expected value is 0.
+# f =   3610. Expected value is   3610.
+# valid_out = 0. Expected value is 0.
+# f =   3610. Expected value is   3610.
+# valid_out = 1. Expected value is 1.
+# f =   7792. Expected value is   7792.
+# valid_out = 1. Expected value is 1.
+# f =   7976. Expected value is   7976.
+# valid_out = 0. Expected value is 0.
+# f =   7976. Expected value is   7976.
+# valid_out = 1. Expected value is 1.
+# f =   3079. Expected value is   3079.
+# valid_out = 0. Expected value is 0.
+# f =   3079. Expected value is   3079.
+# valid_out = 0. Expected value is 0.
+# f =   3079. Expected value is   3079.
+# valid_out = 1. Expected value is 1.
+# f =    811. Expected value is    811.
+# valid_out = 1. Expected value is 1.
+# f =   1171. Expected value is   1171.
+# valid_out = 1. Expected value is 1.
+# f =   1771. Expected value is   1771.
+# valid_out = 1. Expected value is 1.
+# f =   -740. Expected value is   -740.
+# valid_out = 1. Expected value is 1.
+# f =    716. Expected value is    716.
+# ** Note: $finish    : testbench.sv(62)
+#    Time: 236 ns  Iteration: 0  Instance: /test
+# 1
+# Break in Module test at testbench.sv line 62
+# End time: 14:28:48 on Oct 03,2016, Elapsed time: 0:04:23
+# Errors: 0, Warnings: 0

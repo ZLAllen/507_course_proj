@@ -1,0 +1,97 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/home5/zli/ese507work/proj1/part2
+T_opt
+!s110 1475507756
+VEV8`9Q>YYPF9o5oGIb6n;3
+04 4 4 work test fast 0
+=1-989096bd381f-57f2762c-bd8c2-4a14
+Z1 o-quiet -auto_acc_if_foreign -work work
+n@_opt
+Z2 OE;O;10.4c;61
+R0
+T_opt2
+!s110 1475459898
+VZV?hQC]UkOiJ2ikSa?D0Z1
+04 12 4 work tb_part2_mac fast 0
+=1-989096bd381f-57f1bb3a-b94fa-1bc5
+R1
+n@_opt2
+R2
+R0
+vpart2_mac
+Z3 DXx6 sv_std 3 std 0 22 WmjPaeP=7F5?QFXzJ>D[Q2
+!s110 1475507889
+!i10b 1
+!s100 ifATzj7W;=U2gbL=PZ9<=3
+I[RCA<>b?[goHeAYFzU`h?1
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+!s105 MAC_sv_unit
+S1
+R0
+w1475459488
+8MAC.sv
+FMAC.sv
+L0 1
+Z5 OE;L;10.4c;61
+r1
+!s85 0
+31
+!s108 1475507889.000000
+!s107 MAC.sv|
+!s90 +acc|MAC.sv|
+!i113 0
+Z6 o+acc -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vtb_part2_mac
+R3
+!s110 1475507882
+!i10b 1
+!s100 ]X<k=_@44:z2Gi0ZEI4K03
+IkJVSjd[R[dOR@7eDSD73L2
+R4
+!s105 part2_mac_tb_simple_sv_unit
+S1
+R0
+w1475471804
+8part2_mac_tb_simple.sv
+Fpart2_mac_tb_simple.sv
+L0 7
+R5
+r1
+!s85 0
+31
+!s108 1475507882.000000
+!s107 part2_mac_tb_simple.sv|
+!s90 +acc|part2_mac_tb_simple.sv|
+!i113 0
+R6
+vtest
+R3
+!s110 1475507840
+!i10b 1
+!s100 :8SlFPgVoDn_M^nOQ<9Rh1
+I:TzbZX]d>H4bbehe612k`3
+R4
+!s105 testbench_sv_unit
+S1
+R0
+w1475507712
+8testbench.sv
+Ftestbench.sv
+L0 2
+R5
+r1
+!s85 0
+31
+!s108 1475507840.000000
+!s107 MAC.sv|testbench.sv|
+!s90 testbench.sv|
+!i113 0
+o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact

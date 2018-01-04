@@ -1,0 +1,6 @@
+Project 3 milestons
+name: zhaoqi Li, 109051837; Nirali Nayanshah, 111131118
+tasks succesfful for the first, second, fourth parameter set. Synthesis reports genearated without error and major warning.
+problem with the third set: for N <= 2, timing issues with the delay signal in datapath and state trasition in controlpath (delay while at state 5...) didn't figure out a way to fix it.
+Possible alternatives: if the problem persist with the reference solution, I will modify my own code for part I. (should be easy as I am halfway doing it now..)
+

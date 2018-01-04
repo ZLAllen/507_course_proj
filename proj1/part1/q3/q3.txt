@@ -1,0 +1,1 @@
+Two issues: 1) multiple assignment to the same output port b from two different processes; 2) output port e is read in the second process. 

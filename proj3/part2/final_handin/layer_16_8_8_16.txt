@@ -1,0 +1,1526 @@
+
+                      Design Compiler Graphical
+                            DC Ultra (TM)
+                             DFTMAX (TM)
+                         Power Compiler (TM)
+                           DesignWare (R)
+                           DC Expert (TM)
+                         Design Vision (TM)
+                          HDL Compiler (TM)
+                         VHDL Compiler (TM)
+                            DFT Compiler
+                        Library Compiler (TM)
+                         Design Compiler(R)
+
+         Version J-2014.09-SP5-2 for RHEL64 -- Jul 11, 2015
+               Copyright (c) 1988-2015 Synopsys, Inc.
+
+This software and the associated documentation are confidential and 
+proprietary to Synopsys, Inc. Your use or disclosure of this software 
+is subject to the terms and conditions of a written license agreement 
+between you, or your company, and Synopsys, Inc.
+
+Initializing...
+##############################################
+# Setup: fill out the following parameters: name of clock signal, clock period (ns),
+# reset signal name (if used), name of top-level module, name of source file
+set CLK_NAME "clk";
+clk
+set CLK_PERIOD 1;
+1
+set RST_NAME "reset";
+reset
+set TOP_MOD_NAME "layer_16_8_8_16";
+layer_16_8_8_16
+set SRC_FILE "layer_16_8_8_16.sv";
+layer_16_8_8_16.sv
+###############################################
+source setupdc.tcl
+NangateOpenCellLibrary_typical.db dw_foundation.sldb
+file mkdir work_synth
+define_design_lib WORK -path work_synth
+1
+analyze $SRC_FILE -format sverilog
+Running PRESTO HDLC
+Searching for ./layer_16_8_8_16.sv
+Compiling source file ./layer_16_8_8_16.sv
+Presto compilation completed successfully.
+Loading db file '/home/home4/pmilder/ese507/synthesis/lib/NangateOpenCellLibrary_typical.db'
+Loading db file '/usr/local/synopsys/syn/libraries/syn/dw_foundation.sldb'
+1
+elaborate -work WORK $TOP_MOD_NAME
+Loading db file '/usr/local/synopsys/syn/libraries/syn/gtech.db'
+Loading db file '/usr/local/synopsys/syn/libraries/syn/standard.sldb'
+  Loading link library 'NangateOpenCellLibrary'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Warning:  ./layer_16_8_8_16.sv:111: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:112: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:113: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:114: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:115: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:116: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:117: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:118: unsigned to signed assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 109 in file
+	'./layer_16_8_8_16.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           110            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'layer_16_8_8_16'.
+Information: Building the design 'memory' instantiated from design 'layer_16_8_8_16' with
+	the parameters "16,8,4". (HDL-193)
+
+Inferred memory devices in process
+	in routine memory_WIDTH16_SIZE8_LOGSIZE4 line 132 in file
+		'./layer_16_8_8_16.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    data_out_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+============================================================================
+|         block name/line           | Inputs | Outputs | # sel inputs | MB |
+============================================================================
+| memory_WIDTH16_SIZE8_LOGSIZE4/133 |   8    |   16    |      3       | N  |
+============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'layer_16_8_8_16_W_rom_0'. (HDL-193)
+Warning:  ./layer_16_8_8_16.sv:555: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:556: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:557: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:558: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:561: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:564: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:565: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:567: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:568: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:569: unsigned to signed assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 553 in file
+	'./layer_16_8_8_16.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           554            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine layer_16_8_8_16_W_rom_0 line 553 in file
+		'./layer_16_8_8_16.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        z_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'layer_16_8_8_16_B_rom_0'. (HDL-193)
+Warning:  ./layer_16_8_8_16.sv:763: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:764: unsigned to signed assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 761 in file
+	'./layer_16_8_8_16.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           762            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine layer_16_8_8_16_B_rom_0 line 761 in file
+		'./layer_16_8_8_16.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        z_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'layer_16_8_8_16_W_rom_1'. (HDL-193)
+Warning:  ./layer_16_8_8_16.sv:584: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:587: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:589: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:593: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:595: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:596: unsigned to signed assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 579 in file
+	'./layer_16_8_8_16.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           580            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine layer_16_8_8_16_W_rom_1 line 579 in file
+		'./layer_16_8_8_16.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        z_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'layer_16_8_8_16_B_rom_1'. (HDL-193)
+Warning:  ./layer_16_8_8_16.sv:775: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:776: unsigned to signed assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 773 in file
+	'./layer_16_8_8_16.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           774            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine layer_16_8_8_16_B_rom_1 line 773 in file
+		'./layer_16_8_8_16.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        z_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'layer_16_8_8_16_W_rom_2'. (HDL-193)
+Warning:  ./layer_16_8_8_16.sv:607: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:608: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:610: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:611: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:615: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:616: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:617: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:619: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:621: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:622: unsigned to signed assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 605 in file
+	'./layer_16_8_8_16.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           606            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine layer_16_8_8_16_W_rom_2 line 605 in file
+		'./layer_16_8_8_16.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        z_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'layer_16_8_8_16_B_rom_2'. (HDL-193)
+Warning:  ./layer_16_8_8_16.sv:787: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:788: unsigned to signed assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 785 in file
+	'./layer_16_8_8_16.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           786            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine layer_16_8_8_16_B_rom_2 line 785 in file
+		'./layer_16_8_8_16.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        z_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'layer_16_8_8_16_W_rom_3'. (HDL-193)
+Warning:  ./layer_16_8_8_16.sv:635: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:638: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:640: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:642: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:643: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:644: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:646: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:647: unsigned to signed assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 631 in file
+	'./layer_16_8_8_16.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           632            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine layer_16_8_8_16_W_rom_3 line 631 in file
+		'./layer_16_8_8_16.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        z_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'layer_16_8_8_16_B_rom_3'. (HDL-193)
+Warning:  ./layer_16_8_8_16.sv:799: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:800: unsigned to signed assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 797 in file
+	'./layer_16_8_8_16.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           798            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine layer_16_8_8_16_B_rom_3 line 797 in file
+		'./layer_16_8_8_16.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        z_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'layer_16_8_8_16_W_rom_4'. (HDL-193)
+Warning:  ./layer_16_8_8_16.sv:660: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:661: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:662: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:665: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:666: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:668: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:669: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:672: unsigned to signed assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 657 in file
+	'./layer_16_8_8_16.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           658            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine layer_16_8_8_16_W_rom_4 line 657 in file
+		'./layer_16_8_8_16.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        z_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'layer_16_8_8_16_B_rom_4'. (HDL-193)
+Warning:  ./layer_16_8_8_16.sv:811: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:812: unsigned to signed assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 809 in file
+	'./layer_16_8_8_16.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           810            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine layer_16_8_8_16_B_rom_4 line 809 in file
+		'./layer_16_8_8_16.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        z_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'layer_16_8_8_16_W_rom_5'. (HDL-193)
+Warning:  ./layer_16_8_8_16.sv:688: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:689: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:694: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:695: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:696: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:697: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:699: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:700: unsigned to signed assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 683 in file
+	'./layer_16_8_8_16.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           684            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine layer_16_8_8_16_W_rom_5 line 683 in file
+		'./layer_16_8_8_16.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        z_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'layer_16_8_8_16_B_rom_5'. (HDL-193)
+
+Statistics for case statements in always block at line 821 in file
+	'./layer_16_8_8_16.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           822            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine layer_16_8_8_16_B_rom_5 line 821 in file
+		'./layer_16_8_8_16.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        z_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'layer_16_8_8_16_W_rom_6'. (HDL-193)
+Warning:  ./layer_16_8_8_16.sv:718: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:719: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:721: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:722: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:723: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:724: unsigned to signed assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 709 in file
+	'./layer_16_8_8_16.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           710            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine layer_16_8_8_16_W_rom_6 line 709 in file
+		'./layer_16_8_8_16.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        z_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'layer_16_8_8_16_B_rom_6'. (HDL-193)
+
+Statistics for case statements in always block at line 833 in file
+	'./layer_16_8_8_16.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           834            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine layer_16_8_8_16_B_rom_6 line 833 in file
+		'./layer_16_8_8_16.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        z_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'layer_16_8_8_16_W_rom_7'. (HDL-193)
+Warning:  ./layer_16_8_8_16.sv:737: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:740: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:741: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:743: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:744: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:747: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:748: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:749: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:750: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:752: unsigned to signed assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 735 in file
+	'./layer_16_8_8_16.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           736            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine layer_16_8_8_16_W_rom_7 line 735 in file
+		'./layer_16_8_8_16.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        z_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'layer_16_8_8_16_B_rom_7'. (HDL-193)
+Warning:  ./layer_16_8_8_16.sv:847: unsigned to signed assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 845 in file
+	'./layer_16_8_8_16.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           846            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine layer_16_8_8_16_B_rom_7 line 845 in file
+		'./layer_16_8_8_16.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        z_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'datapath' instantiated from design 'layer_16_8_8_16' with
+	the parameters "16,8,16,8". (HDL-193)
+Warning:  ./layer_16_8_8_16.sv:166: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:190: signed to unsigned conversion occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine datapath_M16_N8_T16_P8 line 155 in file
+		'./layer_16_8_8_16.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        f_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+| clear_acc_delay_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine datapath_M16_N8_T16_P8 line 165 in file
+		'./layer_16_8_8_16.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      delay_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine datapath_M16_N8_T16_P8 line 177 in file
+		'./layer_16_8_8_16.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  mul_out_save_reg   | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine datapath_M16_N8_T16_P8 line 182 in file
+		'./layer_16_8_8_16.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    data_out_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'ctrlpath' instantiated from design 'layer_16_8_8_16' with
+	the parameters "16,8,16,8". (HDL-193)
+Warning:  ./layer_16_8_8_16.sv:262: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:374: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:382: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:390: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:398: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:406: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:414: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:422: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:430: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:453: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:496: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:503: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./layer_16_8_8_16.sv:520: signed to unsigned conversion occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine ctrlpath_M16_N8_T16_P8 line 250 in file
+		'./layer_16_8_8_16.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine ctrlpath_M16_N8_T16_P8 line 259 in file
+		'./layer_16_8_8_16.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     addr_x_reg      | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine ctrlpath_M16_N8_T16_P8 line 270 in file
+		'./layer_16_8_8_16.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    out_count_reg    | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine ctrlpath_M16_N8_T16_P8 line 282 in file
+		'./layer_16_8_8_16.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    addr_b_0_reg     | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine ctrlpath_M16_N8_T16_P8 line 293 in file
+		'./layer_16_8_8_16.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    addr_b_1_reg     | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine ctrlpath_M16_N8_T16_P8 line 304 in file
+		'./layer_16_8_8_16.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    addr_b_2_reg     | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine ctrlpath_M16_N8_T16_P8 line 315 in file
+		'./layer_16_8_8_16.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    addr_b_3_reg     | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine ctrlpath_M16_N8_T16_P8 line 326 in file
+		'./layer_16_8_8_16.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    addr_b_4_reg     | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine ctrlpath_M16_N8_T16_P8 line 337 in file
+		'./layer_16_8_8_16.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    addr_b_5_reg     | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine ctrlpath_M16_N8_T16_P8 line 348 in file
+		'./layer_16_8_8_16.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    addr_b_6_reg     | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine ctrlpath_M16_N8_T16_P8 line 359 in file
+		'./layer_16_8_8_16.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    addr_b_7_reg     | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine ctrlpath_M16_N8_T16_P8 line 371 in file
+		'./layer_16_8_8_16.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    addr_w2_0_reg    | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine ctrlpath_M16_N8_T16_P8 line 379 in file
+		'./layer_16_8_8_16.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    addr_w2_1_reg    | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine ctrlpath_M16_N8_T16_P8 line 387 in file
+		'./layer_16_8_8_16.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    addr_w2_2_reg    | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine ctrlpath_M16_N8_T16_P8 line 395 in file
+		'./layer_16_8_8_16.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    addr_w2_3_reg    | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine ctrlpath_M16_N8_T16_P8 line 403 in file
+		'./layer_16_8_8_16.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    addr_w2_4_reg    | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine ctrlpath_M16_N8_T16_P8 line 411 in file
+		'./layer_16_8_8_16.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    addr_w2_5_reg    | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine ctrlpath_M16_N8_T16_P8 line 419 in file
+		'./layer_16_8_8_16.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    addr_w2_6_reg    | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine ctrlpath_M16_N8_T16_P8 line 427 in file
+		'./layer_16_8_8_16.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    addr_w2_7_reg    | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine ctrlpath_M16_N8_T16_P8 line 435 in file
+		'./layer_16_8_8_16.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    clear_acc_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine ctrlpath_M16_N8_T16_P8 line 441 in file
+		'./layer_16_8_8_16.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     wr_en_y_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine ctrlpath_M16_N8_T16_P8 line 446 in file
+		'./layer_16_8_8_16.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| clear_acc_delay_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine ctrlpath_M16_N8_T16_P8 line 450 in file
+		'./layer_16_8_8_16.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     m_valid_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine ctrlpath_M16_N8_T16_P8 line 458 in file
+		'./layer_16_8_8_16.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    sel_count_reg    | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+1
+###### CLOCKS AND PORTS #######
+set CLK_PORT [get_ports $CLK_NAME]
+{clk}
+set TMP1 [remove_from_collection [all_inputs] $CLK_PORT]
+{reset s_valid m_ready data_in[15] data_in[14] data_in[13] data_in[12] data_in[11] data_in[10] data_in[9] data_in[8] data_in[7] data_in[6] data_in[5] data_in[4] data_in[3] data_in[2] data_in[1] data_in[0]}
+set INPUTS [remove_from_collection $TMP1 $RST_NAME]
+{s_valid m_ready data_in[15] data_in[14] data_in[13] data_in[12] data_in[11] data_in[10] data_in[9] data_in[8] data_in[7] data_in[6] data_in[5] data_in[4] data_in[3] data_in[2] data_in[1] data_in[0]}
+create_clock -period $CLK_PERIOD [get_ports clk]
+1
+# set delay for inputs to be 0.2ns
+set_input_delay 0.2 -max -clock clk $INPUTS
+1
+set_output_delay 0.2 -max -clock clk [all_outputs]
+1
+###### OPTIMIZATION #######
+set_max_area 0 
+1
+###### RUN #####
+compile
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | J-2014.09-DWBB_201409.5.2 |   *     |
+| Licensed DW Building Blocks        | J-2014.09-DWBB_201409.5.2 |   *     |
+============================================================================
+
+
+Information: There are 22 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'ctrlpath_M16_N8_T16_P8'
+Information: Added key list 'DesignWare' to design 'ctrlpath_M16_N8_T16_P8'. (DDB-72)
+Information: The register 'state_reg[3]' is a constant and will be removed. (OPT-1206)
+  Processing 'datapath_M16_N8_T16_P8_0'
+Information: Added key list 'DesignWare' to design 'datapath_M16_N8_T16_P8_0'. (DDB-72)
+  Processing 'layer_16_8_8_16_B_rom_7'
+Information: The register 'z_reg[6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[1]' is a constant and will be removed. (OPT-1206)
+  Processing 'layer_16_8_8_16_W_rom_7'
+  Processing 'layer_16_8_8_16_B_rom_6'
+Information: The register 'z_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[14]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[13]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[12]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[11]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[10]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[9]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[8]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[0]' is a constant and will be removed. (OPT-1206)
+  Processing 'layer_16_8_8_16_W_rom_6'
+  Processing 'layer_16_8_8_16_B_rom_5'
+Information: The register 'z_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[14]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[13]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[12]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[11]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[10]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[9]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[8]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[2]' is a constant and will be removed. (OPT-1206)
+  Processing 'layer_16_8_8_16_W_rom_5'
+  Processing 'layer_16_8_8_16_B_rom_4'
+Information: The register 'z_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[14]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[13]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[12]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[11]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[10]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[9]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[8]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[2]' is a constant and will be removed. (OPT-1206)
+  Processing 'layer_16_8_8_16_W_rom_4'
+  Processing 'layer_16_8_8_16_B_rom_3'
+Information: The register 'z_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[14]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[13]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[12]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[11]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[10]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[9]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[8]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[7]' is a constant and will be removed. (OPT-1206)
+  Processing 'layer_16_8_8_16_W_rom_3'
+  Processing 'layer_16_8_8_16_B_rom_2'
+Information: The register 'z_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[14]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[13]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[12]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[11]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[10]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[9]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[8]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[1]' is a constant and will be removed. (OPT-1206)
+  Processing 'layer_16_8_8_16_W_rom_2'
+  Processing 'layer_16_8_8_16_B_rom_1'
+Information: The register 'z_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[14]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[13]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[12]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[11]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[10]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[9]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[8]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[3]' is a constant and will be removed. (OPT-1206)
+  Processing 'layer_16_8_8_16_W_rom_1'
+  Processing 'layer_16_8_8_16_B_rom_0'
+Information: The register 'z_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[14]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[13]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[12]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[11]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[10]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[9]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[8]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'z_reg[0]' is a constant and will be removed. (OPT-1206)
+  Processing 'layer_16_8_8_16_W_rom_0'
+  Processing 'memory_WIDTH16_SIZE8_LOGSIZE4'
+  Processing 'layer_16_8_8_16'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'ctrlpath_M16_N8_T16_P8_DW01_inc_0'
+  Processing 'ctrlpath_M16_N8_T16_P8_DW01_inc_1'
+  Processing 'ctrlpath_M16_N8_T16_P8_DW01_inc_2'
+  Processing 'ctrlpath_M16_N8_T16_P8_DW01_inc_3'
+  Processing 'ctrlpath_M16_N8_T16_P8_DW01_inc_4'
+  Processing 'ctrlpath_M16_N8_T16_P8_DW01_inc_5'
+  Processing 'ctrlpath_M16_N8_T16_P8_DW01_inc_6'
+  Processing 'ctrlpath_M16_N8_T16_P8_DW01_inc_7'
+  Processing 'ctrlpath_M16_N8_T16_P8_DW01_add_0'
+  Mapping 'datapath_M16_N8_T16_P8_1_DW_cmp_0'
+  Processing 'datapath_M16_N8_T16_P8_1_DW01_add_0'
+  Mapping 'datapath_M16_N8_T16_P8_2_DW_cmp_0'
+  Processing 'datapath_M16_N8_T16_P8_2_DW01_add_0'
+  Mapping 'datapath_M16_N8_T16_P8_3_DW_cmp_0'
+  Processing 'datapath_M16_N8_T16_P8_3_DW01_add_0'
+  Mapping 'datapath_M16_N8_T16_P8_4_DW_cmp_0'
+  Processing 'datapath_M16_N8_T16_P8_4_DW01_add_0'
+  Mapping 'datapath_M16_N8_T16_P8_5_DW_cmp_0'
+  Processing 'datapath_M16_N8_T16_P8_5_DW01_add_0'
+  Mapping 'datapath_M16_N8_T16_P8_6_DW_cmp_0'
+  Processing 'datapath_M16_N8_T16_P8_6_DW01_add_0'
+  Mapping 'datapath_M16_N8_T16_P8_7_DW_cmp_0'
+  Processing 'datapath_M16_N8_T16_P8_7_DW01_add_0'
+  Mapping 'datapath_M16_N8_T16_P8_0_DW_cmp_0'
+  Processing 'datapath_M16_N8_T16_P8_0_DW01_add_0'
+  Mapping 'datapath_M16_N8_T16_P8_7_DW_mult_tc_0'
+  Mapping 'datapath_M16_N8_T16_P8_6_DW_mult_tc_0'
+  Mapping 'datapath_M16_N8_T16_P8_5_DW_mult_tc_0'
+  Mapping 'datapath_M16_N8_T16_P8_4_DW_mult_tc_0'
+  Mapping 'datapath_M16_N8_T16_P8_3_DW_mult_tc_0'
+  Mapping 'datapath_M16_N8_T16_P8_2_DW_mult_tc_0'
+  Mapping 'datapath_M16_N8_T16_P8_1_DW_mult_tc_0'
+  Mapping 'datapath_M16_N8_T16_P8_0_DW_mult_tc_0'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+Information: The register 'c/addr_w2_0_reg[5]' will be removed. (OPT-1207)
+Information: The register 'c/addr_w2_1_reg[5]' will be removed. (OPT-1207)
+Information: The register 'c/addr_w2_2_reg[5]' will be removed. (OPT-1207)
+Information: The register 'c/addr_w2_3_reg[5]' will be removed. (OPT-1207)
+Information: The register 'c/addr_w2_4_reg[5]' will be removed. (OPT-1207)
+Information: The register 'c/addr_w2_5_reg[5]' will be removed. (OPT-1207)
+Information: The register 'c/addr_w2_6_reg[5]' will be removed. (OPT-1207)
+Information: The register 'c/addr_w2_7_reg[5]' will be removed. (OPT-1207)
+Information: The register 'c/out_count_reg[2]' will be removed. (OPT-1207)
+Information: The register 'c/out_count_reg[1]' will be removed. (OPT-1207)
+Information: The register 'c/out_count_reg[0]' will be removed. (OPT-1207)
+  Mapping Optimization (Phase 1)
+  Mapping Optimization (Phase 2)
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:11   13986.5      0.65      72.7      68.2                          
+    0:00:11   13961.5      0.65      72.7      68.2                          
+    0:00:11   13961.5      0.65      72.7      68.2                          
+    0:00:11   13961.5      0.65      72.7      68.2                          
+    0:00:11   13961.5      0.65      72.7      68.2                          
+    0:00:12   11678.7      0.66      56.9       8.0                          
+    0:00:13   11666.5      0.62      54.4       8.0                          
+    0:00:13   11675.3      0.61      53.7       8.0                          
+    0:00:13   11683.0      0.61      53.3       8.0                          
+    0:00:13   11689.6      0.59      52.7       8.0                          
+    0:00:14   11694.4      0.59      52.4       8.0                          
+    0:00:14   11704.5      0.58      52.2       8.0                          
+    0:00:14   11710.1      0.58      51.9       8.0                          
+    0:00:14   11716.8      0.58      51.6       8.0                          
+    0:00:14   11716.8      0.58      51.6       8.0                          
+    0:00:14   11716.8      0.58      51.6       8.0                          
+    0:00:14   11718.6      0.58      51.6       3.5                          
+    0:00:14   11720.5      0.58      51.6       0.0                          
+    0:00:14   11720.5      0.58      51.6       0.0                          
+    0:00:14   11720.5      0.58      51.6       0.0                          
+    0:00:14   11720.5      0.58      51.6       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:14   11720.5      0.58      51.6       0.0                          
+    0:00:14   11721.8      0.57      51.4       0.0 d_6/f_reg[15]/D          
+    0:00:14   11728.5      0.57      51.0       0.0 d_0/f_reg[14]/D          
+    0:00:14   11734.9      0.57      50.9       0.0 d_5/f_reg[14]/D          
+    0:00:14   11739.9      0.56      50.8       0.0 d_4/f_reg[14]/D          
+    0:00:14   11742.6      0.56      50.3       0.0 d_2/f_reg[15]/D          
+    0:00:15   11743.4      0.56      50.0       0.0 d_7/f_reg[15]/D          
+    0:00:15   11745.8      0.55      49.2       0.0 d_6/f_reg[15]/D          
+    0:00:15   11753.5      0.55      48.7       0.0 d_1/f_reg[15]/D          
+    0:00:15   11759.6      0.54      48.3       0.0 d_7/f_reg[15]/D          
+    0:00:15   11761.2      0.54      48.0       0.0 d_2/f_reg[14]/D          
+    0:00:15   11767.6      0.54      47.4       0.0 d_3/f_reg[15]/D          
+    0:00:15   11774.8      0.53      46.9       0.0 d_5/f_reg[14]/D          
+    0:00:15   11777.1      0.53      46.7       0.0 d_2/f_reg[15]/D          
+    0:00:15   11783.3      0.53      46.4       0.0 d_3/f_reg[15]/D          
+    0:00:15   11789.1      0.53      46.2       0.0 d_3/f_reg[15]/D          
+    0:00:16   11799.2      0.52      45.6       0.0 d_6/f_reg[15]/D          
+    0:00:16   11798.2      0.52      45.4       0.0 d_2/f_reg[14]/D          
+    0:00:16   11802.4      0.52      45.3       0.0 d_2/f_reg[14]/D          
+    0:00:16   11804.8      0.52      45.2       0.0 d_4/f_reg[15]/D          
+    0:00:16   11807.5      0.52      45.2       0.0 d_0/f_reg[14]/D          
+    0:00:16   11809.9      0.51      45.2       0.0 d_5/f_reg[15]/D          
+    0:00:16   11817.6      0.51      45.1       0.0 d_0/f_reg[14]/D          
+    0:00:16   11820.5      0.51      44.8       0.0 d_1/f_reg[14]/D          
+    0:00:16   11827.2      0.51      44.7       0.0 d_1/f_reg[14]/D          
+    0:00:16   11828.5      0.51      44.7       0.0 d_0/f_reg[14]/D          
+    0:00:16   11834.9      0.50      44.6       0.0 d_6/f_reg[13]/D          
+    0:00:17   11836.2      0.50      44.3       0.0 d_5/f_reg[14]/D          
+    0:00:17   11839.9      0.50      44.2       0.0 d_4/f_reg[15]/D          
+    0:00:17   11842.9      0.50      44.0       0.0 d_3/f_reg[15]/D          
+    0:00:17   11843.9      0.50      43.9       0.0 d_4/f_reg[15]/D          
+    0:00:17   11847.4      0.50      43.6       0.0 d_7/f_reg[15]/D          
+    0:00:17   11849.5      0.50      43.4       0.0 d_6/f_reg[12]/D          
+    0:00:17   11853.5      0.49      43.3       0.0 d_5/f_reg[14]/D          
+    0:00:17   11855.9      0.49      42.9       0.0 d_4/f_reg[14]/D          
+    0:00:17   11858.3      0.49      42.8       0.0 d_1/f_reg[13]/D          
+    0:00:17   11867.1      0.49      42.6       0.0 d_3/f_reg[15]/D          
+    0:00:17   11872.4      0.49      42.6       0.0 d_0/f_reg[15]/D          
+    0:00:17   11878.2      0.49      42.3       0.0 d_4/f_reg[14]/D          
+    0:00:17   11878.8      0.48      42.2       0.0 d_7/f_reg[15]/D          
+    0:00:18   11878.8      0.48      42.1       0.0 d_7/f_reg[14]/D          
+    0:00:18   11884.1      0.48      41.8       0.0 d_3/f_reg[15]/D          
+    0:00:18   11891.8      0.48      41.7       0.0 d_3/f_reg[15]/D          
+    0:00:18   11895.3      0.48      41.5       0.0 d_1/f_reg[12]/D          
+    0:00:18   11898.4      0.47      41.6       0.0 d_0/f_reg[15]/D          
+    0:00:18   11898.7      0.47      41.3       0.0 d_5/f_reg[14]/D          
+    0:00:18   11899.8      0.47      41.0       0.0 d_7/f_reg[12]/D          
+    0:00:18   11901.6      0.47      40.9       0.0 d_3/f_reg[15]/D          
+    0:00:18   11909.6      0.47      40.9       0.0 d_2/f_reg[11]/D          
+    0:00:18   11910.7      0.47      40.8       0.0 d_0/f_reg[15]/D          
+    0:00:18   11918.1      0.47      40.6       0.0 d_6/f_reg[13]/D          
+    0:00:18   11920.5      0.47      40.6       0.0 d_2/f_reg[12]/D          
+    0:00:19   11922.7      0.46      40.6       0.0 d_2/f_reg[12]/D          
+    0:00:19   11926.1      0.46      40.2       0.0 d_6/f_reg[15]/D          
+    0:00:19   11932.0      0.46      40.1       0.0 d_6/f_reg[15]/D          
+    0:00:19   11931.7      0.46      39.9       0.0 d_6/f_reg[13]/D          
+    0:00:19   11934.9      0.46      39.9       0.0 d_2/f_reg[11]/D          
+    0:00:19   11940.5      0.46      39.8       0.0 d_3/f_reg[15]/D          
+    0:00:19   11944.2      0.46      39.7       0.0 d_3/f_reg[15]/D          
+    0:00:19   11945.3      0.46      39.7       0.0 d_3/f_reg[15]/D          
+    0:00:19   11954.6      0.45      39.6       0.0 d_0/f_reg[15]/D          
+    0:00:19   11958.6      0.45      39.3       0.0 d_3/f_reg[15]/D          
+    0:00:19   11961.5      0.45      39.3       0.0 d_0/f_reg[15]/D          
+    0:00:19   11967.9      0.45      39.2       0.0 d_5/f_reg[13]/D          
+    0:00:19   11970.8      0.45      39.1       0.0 d_3/f_reg[15]/D          
+    0:00:20   11972.9      0.45      39.1       0.0 d_0/f_reg[15]/D          
+    0:00:20   11975.9      0.45      38.8       0.0 d_3/f_reg[15]/D          
+    0:00:20   11982.5      0.45      38.7       0.0 d_4/f_reg[14]/D          
+    0:00:20   11984.9      0.44      38.7       0.0 d_3/f_reg[15]/D          
+    0:00:20   11986.8      0.44      38.7       0.0 d_4/f_reg[14]/D          
+    0:00:20   11990.2      0.44      38.6       0.0 d_3/f_reg[15]/D          
+    0:00:20   11994.5      0.44      38.6       0.0 d_4/f_reg[14]/D          
+    0:00:20   11998.7      0.44      38.5       0.0 d_6/f_reg[15]/D          
+    0:00:20   11999.5      0.44      38.5       0.0 d_2/f_reg[12]/D          
+    0:00:20   12002.7      0.44      38.5       0.0 d_3/f_reg[15]/D          
+    0:00:20   12006.7      0.44      38.3       0.0 d_0/f_reg[15]/D          
+    0:00:20   12012.3      0.44      38.2       0.0 d_3/f_reg[15]/D          
+    0:00:20   12013.9      0.44      38.1       0.0 d_3/f_reg[15]/D          
+    0:00:20   12024.0      0.44      38.0       0.0 d_6/f_reg[15]/D          
+    0:00:20   12029.6      0.44      37.9       0.0 d_1/f_reg[15]/D          
+    0:00:21   12032.8      0.44      37.7       0.0 d_6/f_reg[15]/D          
+    0:00:21   12036.0      0.43      37.6       0.0 d_4/f_reg[14]/D          
+    0:00:21   12039.7      0.43      37.4       0.0 d_2/f_reg[15]/D          
+    0:00:21   12038.1      0.43      37.3       0.0 d_0/f_reg[15]/D          
+    0:00:21   12038.6      0.43      37.3       0.0 d_0/f_reg[15]/D          
+    0:00:21   12043.7      0.43      37.2       0.0 d_6/f_reg[12]/D          
+    0:00:21   12046.1      0.43      37.2       0.0 d_4/f_reg[14]/D          
+    0:00:21   12047.4      0.43      37.2       0.0 d_0/f_reg[15]/D          
+    0:00:21   12047.1      0.43      37.1       0.0 d_0/f_reg[15]/D          
+    0:00:21   12050.6      0.43      37.0       0.0 d_1/f_reg[12]/D          
+    0:00:21   12054.1      0.43      36.9       0.0 d_6/f_reg[12]/D          
+    0:00:21   12055.4      0.43      36.8       0.0 d_3/f_reg[15]/D          
+    0:00:21   12059.1      0.43      36.7       0.0 d_3/f_reg[15]/D          
+    0:00:21   12061.0      0.42      36.6       0.0 d_4/f_reg[14]/D          
+    0:00:21   12064.7      0.42      36.6       0.0 d_6/f_reg[13]/D          
+    0:00:22   12067.1      0.42      36.6       0.0 d_3/f_reg[15]/D          
+    0:00:22   12066.6      0.42      36.6       0.0 d_2/f_reg[11]/D          
+    0:00:22   12066.8      0.42      36.5       0.0 d_4/f_reg[14]/D          
+    0:00:22   12076.4      0.42      36.4       0.0 d_2/f_reg[15]/D          
+    0:00:22   12080.9      0.42      36.4       0.0 d_2/f_reg[12]/D          
+    0:00:22   12087.0      0.42      36.3       0.0 d_6/f_reg[13]/D          
+    0:00:22   12089.7      0.42      36.2       0.0 d_2/f_reg[15]/D          
+    0:00:22   12088.6      0.42      36.2       0.0 d_1/f_reg[12]/D          
+    0:00:22   12090.0      0.42      36.1       0.0 d_7/f_reg[14]/D          
+    0:00:23   12093.2      0.42      36.0       0.0 d_4/f_reg[14]/D          
+    0:00:23   12093.4      0.42      35.8       0.0 d_5/f_reg[12]/D          
+    0:00:23   12095.0      0.42      35.8       0.0 d_0/f_reg[14]/D          
+    0:00:23   12092.1      0.42      35.7       0.0 d_5/f_reg[13]/D          
+    0:00:23   12096.1      0.42      35.3       0.0 d_4/f_reg[14]/D          
+    0:00:23   12093.7      0.41      34.7       0.0 d_6/f_reg[13]/D          
+    0:00:23   12099.0      0.41      34.6       0.0 d_7/f_reg[13]/D          
+    0:00:24   12100.1      0.41      34.6       0.0 d_4/f_reg[14]/D          
+    0:00:24   12104.9      0.41      34.5       0.0 d_4/f_reg[14]/D          
+    0:00:24   12106.7      0.41      34.2       0.0 d_7/f_reg[15]/D          
+    0:00:24   12109.1      0.41      34.1       0.0 d_6/f_reg[15]/D          
+    0:00:24   12110.4      0.41      34.0       0.0 d_5/f_reg[12]/D          
+    0:00:24   12110.4      0.40      33.9       0.0 d_6/f_reg[15]/D          
+    0:00:24   12113.4      0.40      33.9       0.0 d_5/f_reg[13]/D          
+    0:00:24   12113.9      0.40      33.7       0.0 d_1/f_reg[15]/D          
+    0:00:24   12115.2      0.40      33.6       0.0 d_4/f_reg[14]/D          
+    0:00:24   12118.2      0.40      33.5       0.0 d_4/f_reg[14]/D          
+    0:00:24   12121.6      0.40      33.5       0.0 d_4/f_reg[14]/D          
+    0:00:24   12123.7      0.40      33.3       0.0 d_6/f_reg[14]/D          
+    0:00:25   12128.8      0.40      33.3       0.0 d_4/f_reg[14]/D          
+    0:00:25   12133.3      0.40      33.2       0.0 d_5/f_reg[14]/D          
+    0:00:25   12138.1      0.40      33.2       0.0 d_6/f_reg[14]/D          
+    0:00:25   12140.0      0.40      33.1       0.0 d_2/f_reg[15]/D          
+    0:00:25   12137.8      0.40      33.1       0.0 d_4/f_reg[14]/D          
+    0:00:25   12140.5      0.40      33.0       0.0 d_2/f_reg[15]/D          
+    0:00:25   12144.0      0.40      33.0       0.0 d_4/f_reg[14]/D          
+    0:00:25   12146.4      0.39      33.0       0.0 d_5/f_reg[15]/D          
+    0:00:25   12148.5      0.39      32.9       0.0 d_6/f_reg[12]/D          
+    0:00:25   12152.2      0.39      32.8       0.0 d_2/f_reg[15]/D          
+    0:00:25   12155.1      0.39      32.7       0.0 d_1/f_reg[13]/D          
+    0:00:25   12162.8      0.39      32.6       0.0 d_6/f_reg[12]/D          
+    0:00:25   12166.0      0.39      32.6       0.0 d_6/f_reg[12]/D          
+    0:00:25   12171.6      0.39      32.5       0.0 d_7/f_reg[13]/D          
+    0:00:26   12173.8      0.39      32.4       0.0 d_7/f_reg[13]/D          
+    0:00:26   12175.4      0.39      32.3       0.0 d_1/f_reg[12]/D          
+    0:00:26   12174.6      0.39      32.3       0.0 d_4/f_reg[14]/D          
+    0:00:26   12178.5      0.39      32.2       0.0 d_6/f_reg[12]/D          
+    0:00:26   12178.8      0.39      32.2       0.0 d_5/f_reg[12]/D          
+    0:00:26   12181.5      0.39      32.2       0.0 d_4/f_reg[14]/D          
+    0:00:26   12181.5      0.39      32.2       0.0                          
+    0:00:27   12086.5      0.39      32.2       0.0                          
+    0:00:27   12045.5      0.39      32.2       0.0                          
+    0:00:27   12046.6      0.39      32.1       0.0 d_1/f_reg[12]/D          
+    0:00:27   12047.1      0.39      32.1       0.0 d_4/f_reg[12]/D          
+    0:00:27   12046.9      0.39      32.1       0.0 d_7/f_reg[13]/D          
+    0:00:28   12050.6      0.39      32.0       0.0 d_6/f_reg[14]/D          
+    0:00:28   12058.3      0.39      32.0       0.0 d_0/f_reg[12]/D          
+    0:00:28   12058.0      0.39      32.0       0.0 d_4/f_reg[12]/D          
+    0:00:28   12060.2      0.39      32.1       0.0 d_1/f_reg[15]/D          
+    0:00:28   12061.0      0.39      32.1       0.0 d_5/f_reg[15]/D          
+    0:00:28   12061.5      0.38      32.0       0.0 d_6/f_reg[15]/D          
+    0:00:28   12065.5      0.38      32.0       0.0 d_0/f_reg[13]/D          
+    0:00:28   12065.5      0.38      32.0       0.0 d_4/f_reg[15]/D          
+    0:00:28   12068.2      0.38      31.9       0.0 d_1/f_reg[12]/D          
+    0:00:28   12068.4      0.38      31.9       0.0 d_6/f_reg[15]/D          
+    0:00:28   12073.2      0.38      31.9       0.0 d_7/f_reg[13]/D          
+    0:00:28   12072.9      0.38      31.9       0.0 d_2/f_reg[12]/D          
+    0:00:28   12074.0      0.38      31.9       0.0 d_6/f_reg[15]/D          
+    0:00:29   12075.3      0.38      31.8       0.0 d_4/f_reg[12]/D          
+    0:00:29   12082.8      0.38      31.7       0.0 d_4/f_reg[12]/D          
+    0:00:29   12086.8      0.38      31.6       0.0 d_0/f_reg[12]/D          
+    0:00:29   12092.1      0.38      31.6       0.0                          
+    0:00:29   12093.7      0.38      31.5       0.0                          
+    0:00:29   12095.0      0.38      31.5       0.0                          
+    0:00:29   12098.7      0.38      31.5       0.0                          
+    0:00:29   12097.9      0.38      31.5       0.0                          
+    0:00:29   12099.0      0.38      31.5       0.0                          
+    0:00:29   12098.2      0.38      31.5       0.0                          
+    0:00:30   12097.9      0.38      31.5       0.0                          
+    0:00:30   12097.9      0.38      31.4       0.0                          
+    0:00:30   12097.4      0.38      31.3       0.0                          
+    0:00:30   12096.9      0.38      31.2       0.0                          
+    0:00:30   12098.2      0.38      31.1       0.0                          
+    0:00:30   12098.7      0.38      31.1       0.0                          
+    0:00:30   12099.0      0.38      31.1       0.0                          
+    0:00:30   12099.3      0.38      31.0       0.0                          
+    0:00:30   12100.3      0.38      31.0       0.0                          
+    0:00:30   12099.8      0.38      30.9       0.0                          
+    0:00:30   12100.6      0.38      30.9       0.0                          
+    0:00:30   12100.9      0.38      30.9       0.0                          
+    0:00:30   12096.9      0.38      30.8       0.0                          
+    0:00:30   12098.7      0.38      30.7       0.0                          
+    0:00:31   12101.4      0.38      30.8       0.0                          
+    0:00:31   12104.9      0.38      30.8       0.0                          
+    0:00:31   12104.3      0.38      30.7       0.0                          
+    0:00:31   12106.5      0.38      30.7       0.0                          
+    0:00:31   12108.9      0.38      30.7       0.0                          
+    0:00:31   12112.6      0.38      30.7       0.0                          
+    0:00:31   12115.2      0.38      30.6       0.0                          
+    0:00:31   12116.6      0.38      30.6       0.0                          
+    0:00:31   12117.4      0.38      30.5       0.0                          
+    0:00:31   12121.1      0.38      30.4       0.0                          
+    0:00:31   12123.2      0.38      30.4       0.0                          
+    0:00:31   12123.7      0.38      30.3       0.0                          
+    0:00:31   12122.7      0.38      30.3       0.0                          
+    0:00:31   12122.7      0.38      30.3       0.0                          
+    0:00:31   12123.5      0.38      30.2       0.0                          
+    0:00:31   12124.3      0.38      30.2       0.0                          
+    0:00:31   12122.9      0.38      30.2       0.0                          
+    0:00:32   12126.4      0.38      30.2       0.0                          
+    0:00:32   12126.9      0.38      30.1       0.0                          
+    0:00:32   12128.3      0.38      30.1       0.0                          
+    0:00:32   12128.3      0.38      30.1       0.0                          
+    0:00:32   12130.7      0.38      30.0       0.0                          
+    0:00:32   12131.7      0.38      30.1       0.0                          
+    0:00:32   12132.3      0.38      30.0       0.0                          
+    0:00:32   12132.8      0.38      30.0       0.0                          
+    0:00:32   12135.5      0.38      30.0       0.0                          
+    0:00:32   12137.6      0.38      30.0       0.0                          
+    0:00:32   12140.2      0.38      29.9       0.0                          
+    0:00:32   12144.5      0.38      29.9       0.0                          
+    0:00:32   12145.8      0.38      29.9       0.0                          
+    0:00:32   12146.9      0.38      29.9       0.0                          
+
+
+  Beginning Area-Recovery Phase  (max_area 0)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:32   12146.9      0.38      29.9       0.0                          
+    0:00:32   12146.9      0.38      29.9       0.0                          
+    0:00:33   12088.6      0.38      29.8       0.0                          
+    0:00:33   12084.6      0.38      29.8       0.0                          
+    0:00:33   12084.1      0.38      29.8       0.0                          
+    0:00:33   12083.6      0.38      29.8       0.0                          
+    0:00:33   12083.0      0.38      29.8       0.0                          
+    0:00:33   12083.0      0.38      29.8       0.0                          
+    0:00:33   12083.0      0.38      29.8       0.0                          
+    0:00:33   12061.5      0.40      30.4       0.0                          
+    0:00:33   12060.4      0.40      30.4       0.0                          
+    0:00:33   12060.4      0.40      30.4       0.0                          
+    0:00:33   12060.4      0.40      30.4       0.0                          
+    0:00:33   12060.4      0.40      30.4       0.0                          
+    0:00:33   12060.4      0.40      30.4       0.0                          
+    0:00:33   12060.4      0.40      30.4       0.0                          
+    0:00:33   12058.6      0.38      29.8       0.0 d_3/f_reg[13]/D          
+    0:00:33   12059.6      0.38      29.7       0.0 d_6/f_reg[15]/D          
+    0:00:33   12060.2      0.37      29.7       0.0 d_6/f_reg[15]/D          
+    0:00:33   12065.8      0.37      29.7       0.0 d_1/f_reg[15]/D          
+    0:00:33   12065.2      0.37      29.9       0.0 d_6/f_reg[14]/D          
+    0:00:34   12064.7      0.37      29.9       0.0                          
+    0:00:34   12061.2      0.37      29.9       0.0                          
+    0:00:34   12055.4      0.37      29.7       0.0                          
+    0:00:34   12048.2      0.37      29.6       0.0                          
+    0:00:34   12045.3      0.37      29.6       0.0                          
+    0:00:34   12039.2      0.37      29.5       0.0                          
+    0:00:34   12034.4      0.37      29.4       0.0                          
+    0:00:34   12013.1      0.37      29.3       0.0                          
+    0:00:34   12000.6      0.37      29.1       0.0                          
+    0:00:35   11989.4      0.37      29.1       0.0                          
+    0:00:35   11986.2      0.37      29.1       0.0                          
+    0:00:35   11985.4      0.37      29.0       0.0                          
+    0:00:35   11982.5      0.37      29.1       0.0                          
+    0:00:35   11982.5      0.37      29.1       0.0                          
+    0:00:35   11982.5      0.37      29.1       0.0                          
+    0:00:35   11982.5      0.37      29.1       0.0                          
+    0:00:35   11982.5      0.37      29.1       0.0                          
+    0:00:35   11982.5      0.37      29.1       0.0                          
+    0:00:35   11983.3      0.37      29.2       0.0 d_6/f_reg[12]/D          
+    0:00:35   11987.0      0.37      29.2       0.0 d_1/f_reg[15]/D          
+    0:00:35   11992.3      0.37      29.2       0.0 d_1/f_reg[14]/D          
+    0:00:35   11999.8      0.37      29.2       0.0 d_6/f_reg[12]/D          
+    0:00:35   12003.5      0.37      29.2       0.0 d_6/f_reg[15]/D          
+    0:00:35   12011.5      0.37      29.2       0.0 d_2/f_reg[15]/D          
+    0:00:35   12011.5      0.37      29.1       0.0 d_1/f_reg[14]/D          
+    0:00:36   12010.7      0.37      29.0       0.0 d_1/f_reg[14]/D          
+    0:00:36   12011.0      0.37      29.0       0.0                          
+    0:00:36   12003.5      0.37      28.9       0.0                          
+    0:00:36   12002.7      0.37      28.9       0.0                          
+    0:00:36   11999.5      0.37      28.9       0.0                          
+    0:00:36   11995.0      0.37      28.8       0.0                          
+    0:00:36   11995.0      0.37      28.8       0.0                          
+    0:00:36   11995.0      0.37      28.8       0.0                          
+    0:00:36   11995.8      0.37      28.8       0.0                          
+    0:00:36   11995.8      0.37      28.7       0.0                          
+    0:00:36   11996.6      0.37      28.7       0.0                          
+    0:00:37   11995.8      0.37      28.7       0.0                          
+    0:00:37   11996.1      0.37      28.7       0.0                          
+    0:00:37   11997.4      0.37      28.6       0.0                          
+    0:00:37   12000.6      0.37      28.6       0.0                          
+    0:00:37   11999.5      0.37      28.5       0.0                          
+    0:00:37   11999.8      0.37      28.6       0.0                          
+    0:00:37   12001.4      0.37      28.5       0.0                          
+    0:00:37   12002.5      0.37      28.5       0.0                          
+    0:00:37   12003.2      0.37      28.5       0.0                          
+    0:00:37   12004.3      0.37      28.5       0.0                          
+    0:00:37   12004.3      0.37      28.4       0.0                          
+    0:00:38   12005.9      0.37      28.4       0.0                          
+    0:00:38   12006.2      0.37      28.4       0.0                          
+    0:00:38   12005.9      0.37      28.4       0.0                          
+    0:00:38   12002.7      0.37      28.4       0.0                          
+    0:00:38   12002.7      0.37      28.4       0.0                          
+    0:00:38   12003.5      0.37      28.3       0.0                          
+    0:00:38   12003.2      0.37      28.3       0.0                          
+    0:00:38   12004.6      0.37      28.3       0.0                          
+    0:00:38   12006.2      0.37      28.3       0.0                          
+    0:00:38   12006.2      0.37      28.3       0.0                          
+    0:00:38   12005.1      0.37      28.4       0.0                          
+    0:00:38   12007.2      0.37      28.3       0.0                          
+    0:00:38   12008.3      0.37      28.2       0.0                          
+    0:00:38   12008.3      0.37      28.2       0.0                          
+    0:00:38   12009.6      0.37      28.1       0.0                          
+    0:00:38   12009.9      0.37      28.1       0.0                          
+    0:00:38   12009.6      0.37      28.1       0.0                          
+    0:00:39   12010.4      0.37      28.1       0.0                          
+    0:00:39   12011.0      0.37      28.1       0.0                          
+    0:00:39   12012.3      0.37      28.1       0.0                          
+    0:00:39   12012.6      0.37      28.0       0.0                          
+    0:00:39   12015.8      0.37      28.0       0.0                          
+    0:00:39   12016.8      0.37      28.0       0.0                          
+    0:00:39   12020.8      0.37      28.0       0.0                          
+    0:00:39   12022.1      0.37      27.9       0.0 d_1/f_reg[14]/D          
+    0:00:39   12022.7      0.37      28.0       0.0 d_6/f_reg[15]/D          
+    0:00:39   12024.5      0.36      28.0       0.0 d_1/f_reg[14]/D          
+    0:00:39   12025.9      0.36      27.9       0.0 d_6/f_reg[15]/D          
+    0:00:39   12026.9      0.36      27.9       0.0 d_4/f_reg[13]/D          
+    0:00:39   12028.5      0.36      27.9       0.0 d_6/f_reg[13]/D          
+    0:00:39   12032.8      0.36      28.0       0.0 d_6/f_reg[13]/D          
+    0:00:40   12036.0      0.36      28.0       0.0 d_5/f_reg[15]/D          
+    0:00:40   12039.4      0.36      28.0       0.0 d_6/f_reg[12]/D          
+    0:00:40   12039.2      0.36      28.0       0.0 d_6/f_reg[14]/D          
+    0:00:40   12040.2      0.36      28.0       0.0 d_6/f_reg[14]/D          
+    0:00:40   12042.6      0.36      28.0       0.0 d_7/f_reg[15]/D          
+    0:00:40   12044.2      0.36      28.0       0.0 d_5/f_reg[12]/D          
+    0:00:40   12053.0      0.36      28.0       0.0 d_5/f_reg[15]/D          
+    0:00:40   12054.9      0.36      28.0       0.0 d_5/f_reg[12]/D          
+    0:00:40   12058.0      0.36      28.0       0.0 d_4/f_reg[13]/D          
+    0:00:40   12061.2      0.36      28.0       0.0 d_5/f_reg[15]/D          
+    0:00:40   12062.0      0.36      28.0       0.0 d_6/f_reg[12]/D          
+    0:00:40   12062.6      0.36      28.0       0.0 d_7/f_reg[15]/D          
+    0:00:41   12064.7      0.36      28.0       0.0                          
+Loading db file '/home/home4/pmilder/ese507/synthesis/lib/NangateOpenCellLibrary_typical.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+1
+report_area
+ 
+****************************************
+Report : area
+Design : layer_16_8_8_16
+Version: J-2014.09-SP5-2
+Date   : Fri Dec  9 00:33:52 2016
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /home/home4/pmilder/ese507/synthesis/lib/NangateOpenCellLibrary_typical.db)
+
+Number of ports:                           38
+Number of nets:                           633
+Number of cells:                          170
+Number of combinational cells:            144
+Number of sequential cells:                 0
+Number of macros/black boxes:               0
+Number of buf/inv:                         40
+Number of references:                      37
+
+Combinational area:               8501.093995
+Buf/Inv area:                      755.440001
+Noncombinational area:            3563.601873
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                 12064.695868
+Total area:                 undefined
+1
+report_power
+Loading db file '/home/home4/pmilder/ese507/synthesis/lib/NangateOpenCellLibrary_typical.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : layer_16_8_8_16
+Version: J-2014.09-SP5-2
+Date   : Fri Dec  9 00:33:53 2016
+****************************************
+
+
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /home/home4/pmilder/ese507/synthesis/lib/NangateOpenCellLibrary_typical.db)
+
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+Design        Wire Load Model            Library
+------------------------------------------------
+layer_16_8_8_16        5K_hvratio_1_1    NangateOpenCellLibrary
+
+
+Global Operating Voltage = 1.1  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+  Cell Internal Power  =   6.5478 mW   (74%)
+  Net Switching Power  =   2.3025 mW   (26%)
+                         ---------
+Total Dynamic Power    =   8.8503 mW  (100%)
+
+Cell Leakage Power     = 261.0021 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register       4.5924e+03          286.6331        6.1729e+04        4.9407e+03  (  54.23%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational  1.9555e+03        2.0159e+03        1.9927e+05        4.1706e+03  (  45.77%)
+--------------------------------------------------------------------------------------------------
+Total          6.5478e+03 uW     2.3025e+03 uW     2.6100e+05 nW     9.1113e+03 uW
+1
+report_timing
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : layer_16_8_8_16
+Version: J-2014.09-SP5-2
+Date   : Fri Dec  9 00:33:53 2016
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: mem_x/data_out_reg[3]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: d_6/f_reg[12]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  layer_16_8_8_16    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  mem_x/data_out_reg[3]/CK (SDFF_X1)                      0.00       0.00 r
+  mem_x/data_out_reg[3]/Q (SDFF_X1)                       0.10       0.10 f
+  mem_x/data_out[3] (memory_WIDTH16_SIZE8_LOGSIZE4)       0.00       0.10 f
+  U130/Z (BUF_X1)                                         0.05       0.15 f
+  d_6/data_out_x[3] (datapath_M16_N8_T16_P8_2)            0.00       0.15 f
+  d_6/mult_173/a[3] (datapath_M16_N8_T16_P8_2_DW_mult_tc_1)
+                                                          0.00       0.15 f
+  d_6/mult_173/U717/ZN (INV_X1)                           0.03       0.19 r
+  d_6/mult_173/U504/Z (XOR2_X1)                           0.07       0.26 r
+  d_6/mult_173/U480/ZN (OR2_X2)                           0.07       0.33 r
+  d_6/mult_173/U817/ZN (OAI22_X1)                         0.05       0.37 f
+  d_6/mult_173/U187/CO (FA_X1)                            0.10       0.48 f
+  d_6/mult_173/U182/S (FA_X1)                             0.13       0.61 r
+  d_6/mult_173/U181/S (FA_X1)                             0.12       0.73 f
+  d_6/mult_173/U737/ZN (NOR2_X1)                          0.05       0.78 r
+  d_6/mult_173/U735/ZN (OAI21_X1)                         0.04       0.82 f
+  d_6/mult_173/U746/ZN (XNOR2_X1)                         0.06       0.88 f
+  d_6/mult_173/product[10] (datapath_M16_N8_T16_P8_2_DW_mult_tc_1)
+                                                          0.00       0.88 f
+  d_6/U13/Z (MUX2_X2)                                     0.07       0.95 f
+  d_6/add_174/A[10] (datapath_M16_N8_T16_P8_2_DW01_add_2)
+                                                          0.00       0.95 f
+  d_6/add_174/U145/ZN (OR2_X1)                            0.06       1.01 f
+  d_6/add_174/U231/ZN (AOI21_X1)                          0.04       1.05 r
+  d_6/add_174/U239/ZN (OAI21_X1)                          0.04       1.09 f
+  d_6/add_174/U205/ZN (INV_X1)                            0.03       1.12 r
+  d_6/add_174/U233/ZN (OAI21_X1)                          0.03       1.15 f
+  d_6/add_174/U235/ZN (XNOR2_X1)                          0.05       1.20 f
+  d_6/add_174/SUM[12] (datapath_M16_N8_T16_P8_2_DW01_add_2)
+                                                          0.00       1.20 f
+  d_6/U73/ZN (AOI222_X1)                                  0.08       1.28 r
+  d_6/U74/ZN (INV_X1)                                     0.02       1.31 f
+  d_6/f_reg[12]/D (DFF_X1)                                0.01       1.31 f
+  data arrival time                                                  1.31
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  d_6/f_reg[12]/CK (DFF_X1)                               0.00       1.00 r
+  library setup time                                     -0.04       0.96
+  data required time                                                 0.96
+  --------------------------------------------------------------------------
+  data required time                                                 0.96
+  data arrival time                                                 -1.31
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.36
+
+
+1
+write -f verilog $TOP_MOD_NAME -output gates.v -hierarchy
+Writing verilog file '/home/home5/zli/ese507work/proj3/part2/gates.v'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+Warning: Verilog writer has added 16 nets to module datapath_M16_N8_T16_P8_0 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 16 nets to module datapath_M16_N8_T16_P8_7 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 16 nets to module datapath_M16_N8_T16_P8_6 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 16 nets to module datapath_M16_N8_T16_P8_5 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 16 nets to module datapath_M16_N8_T16_P8_4 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 16 nets to module datapath_M16_N8_T16_P8_3 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 16 nets to module datapath_M16_N8_T16_P8_2 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 16 nets to module datapath_M16_N8_T16_P8_1 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 88 nets to module layer_16_8_8_16 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+1
+quit
+
+Thank you...

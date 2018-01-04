@@ -1,0 +1,165 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/home5/zli/ese507work/proj2/part2
+T_opt
+!s110 1478113036
+VX9nI;MiY>1=21UYUFJfYT0
+04 12 4 work check_timing fast 0
+=1-989096bd34a3-581a370c-a7ec7-1ef6
+Z1 o-quiet -auto_acc_if_foreign -work work
+n@_opt
+Z2 OE;O;10.4c;61
+T_opt1
+!s110 1478103770
+V>fSgZ540G@ki3QhJPO:U@3
+04 4 4 work test fast 0
+=1-989096bd34a3-581a12da-ac252-6f51
+R1
+n@_opt1
+R2
+R0
+vcheck_timing
+Z3 DXx6 sv_std 3 std 0 22 WmjPaeP=7F5?QFXzJ>D[Q2
+!s110 1478113015
+!i10b 1
+!s100 lHlOf]8:OjB^6Ae:QPQUc2
+IjI<?l<azk=hC;XRjT`:=K3
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+!s105 mvm3_part2_simple_tb_sv_unit
+S1
+R0
+w1478036489
+8mvm3_part2_simple_tb.sv
+Fmvm3_part2_simple_tb.sv
+L0 6
+Z5 OE;L;10.4c;61
+r1
+!s85 0
+31
+!s108 1478113015.000000
+!s107 mvm3_part2_simple_tb.sv|
+!s90 +acc|mvm3_part2_simple_tb.sv|
+!i113 0
+Z6 o+acc -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vmemory
+R3
+Z7 !s110 1478113008
+!i10b 1
+!s100 Ki7Mon[<Hzn`UZD`JkjIz3
+I3=`mGehkGC:g@_0e]UiS@2
+R4
+Z8 !s105 mac_p2part2_sv_unit
+S1
+R0
+Z9 w1478024993
+8memory.sv
+Fmemory.sv
+L0 1
+R5
+r1
+!s85 0
+31
+Z10 !s108 1478113008.000000
+Z11 !s107 part2_mac.sv|memory.sv|mac_p2part2.sv|
+Z12 !s90 +acc|mac_p2part2.sv|
+!i113 0
+R6
+vmvm3_part1
+R3
+!s110 1478035269
+!i10b 1
+!s100 @z7=gYTT2E]:eg6QonKW73
+Ic:5gDGSPES[_AzDOJVT=o2
+R4
+R8
+S1
+R0
+w1478035250
+Z13 8mac_p2part2.sv
+Z14 Fmac_p2part2.sv
+L0 3
+R5
+r1
+!s85 0
+31
+!s108 1478035269.000000
+!s107 memory.sv|mac_p2part2.sv|
+R12
+!i113 0
+R6
+vmvm3_part2
+R3
+R7
+!i10b 1
+!s100 D9SLLEc_6c0iCa;6Vg[0W2
+IHnihIZ75f]REJQXl`M@Qd3
+R4
+R8
+S1
+R0
+w1478112694
+R13
+R14
+L0 3
+R5
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R6
+vpart2_mac
+R3
+R7
+!i10b 1
+!s100 Z23?B^57UfNWOE1CL8KFj2
+IZa8@;1S2;dmfdgJNdQZVl0
+R4
+R8
+S1
+R0
+R9
+8part2_mac.sv
+Fpart2_mac.sv
+L0 4
+R5
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R6
+vtest
+R3
+!s110 1478103753
+!i10b 1
+!s100 U1^SenM^J_YlmBTL2i>n22
+IMm?cDSfZbfgP_3>kHOOeA3
+R4
+!s105 testbench_sv_unit
+S1
+R0
+w1478102623
+8testbench.sv
+Ftestbench.sv
+L0 6
+R5
+r1
+!s85 0
+31
+!s108 1478103753.000000
+!s107 testbench.sv|
+!s90 +acc|testbench.sv|
+!i113 0
+R6

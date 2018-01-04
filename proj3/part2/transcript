@@ -1,0 +1,60 @@
+# //  ModelSim SE 10.4c Jul 19 2015 Linux 3.10.0-327.36.3.el7.x86_64
+# //
+# //  Copyright 1991-2015 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
+# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
+# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
+# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
+# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
+# //
+# vsim tb_layer_16_8_16_16 
+# Start time: 01:26:44 on Dec 09,2016
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "ctrlpath(fast)".
+# Loading sv_std.std
+# Loading work.tb_layer_16_8_16_16(fast)
+# Loading work.layer_16_8_16_16(fast)
+# Loading work.memory(fast)
+# Loading work.layer_16_8_16_16_W_rom_0(fast)
+# Loading work.layer_16_8_16_16_B_rom_0(fast)
+# Loading work.layer_16_8_16_16_W_rom_1(fast)
+# Loading work.layer_16_8_16_16_B_rom_1(fast)
+# Loading work.layer_16_8_16_16_W_rom_2(fast)
+# Loading work.layer_16_8_16_16_B_rom_2(fast)
+# Loading work.layer_16_8_16_16_W_rom_3(fast)
+# Loading work.layer_16_8_16_16_B_rom_3(fast)
+# Loading work.layer_16_8_16_16_W_rom_4(fast)
+# Loading work.layer_16_8_16_16_B_rom_4(fast)
+# Loading work.layer_16_8_16_16_W_rom_5(fast)
+# Loading work.layer_16_8_16_16_B_rom_5(fast)
+# Loading work.layer_16_8_16_16_W_rom_6(fast)
+# Loading work.layer_16_8_16_16_B_rom_6(fast)
+# Loading work.layer_16_8_16_16_W_rom_7(fast)
+# Loading work.layer_16_8_16_16_B_rom_7(fast)
+# Loading work.layer_16_8_16_16_W_rom_8(fast)
+# Loading work.layer_16_8_16_16_B_rom_8(fast)
+# Loading work.layer_16_8_16_16_W_rom_9(fast)
+# Loading work.layer_16_8_16_16_B_rom_9(fast)
+# Loading work.layer_16_8_16_16_W_rom_10(fast)
+# Loading work.layer_16_8_16_16_B_rom_10(fast)
+# Loading work.layer_16_8_16_16_W_rom_11(fast)
+# Loading work.layer_16_8_16_16_B_rom_11(fast)
+# Loading work.layer_16_8_16_16_W_rom_12(fast)
+# Loading work.layer_16_8_16_16_B_rom_12(fast)
+# Loading work.layer_16_8_16_16_W_rom_13(fast)
+# Loading work.layer_16_8_16_16_B_rom_13(fast)
+# Loading work.layer_16_8_16_16_W_rom_14(fast)
+# Loading work.layer_16_8_16_16_B_rom_14(fast)
+# Loading work.layer_16_8_16_16_W_rom_15(fast)
+# Loading work.layer_16_8_16_16_B_rom_15(fast)
+# Loading work.datapath(fast)
+# Loading work.ctrlpath(fast)
+add wave -position end sim:/tb_layer_16_8_16_16/dut/*
+run 30000
+# End time: 01:32:01 on Dec 09,2016, Elapsed time: 0:05:17
+# Errors: 0, Warnings: 0

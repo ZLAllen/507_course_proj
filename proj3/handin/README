@@ -1,0 +1,23 @@
+README for Project 3 handin
+
+/***********************
+ ***    Directory    ***
+ ***********************/
+
+ In src/, source code is available for part1/ part2/ part3/. They are ready to be compiled and synthesized (Please have vlog and dc_shell available). Simply run testmode1/2 with specific parameters to test.
+ 
+ In part1, we are producing code from a template file. There are two version of the template: one has a pipeline register after the multiplier, one does not. If anything gone wrong with the pipeline version, change the name of the no pipeline version to template.txt to rerun. The no pipeline version is working well for all my testing so far, while I didn't do as many testing for the pipeline version.
+
+ In part2 and part3, there is no template file. Simply make and run the generator to produce files. Recommend to use testmode for simplicity.
+
+ In hdl/, *_para are files that used for report evaluation. * tests for M, N, P, T, L. The generated design/testbench is under layer/ or network/ inside all these files, while the synthesis output result is under output/.
+
+ In report/, project 3 report is available in pdf
+
+
+/***********************
+ ***    Students     ***
+ ***********************/
+
+ Zhaoqi Li 109051837
+ Nirali NayanShan 111131118

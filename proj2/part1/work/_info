@@ -1,0 +1,151 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/home5/zli/ese507work/proj2/part1
+T_opt
+!s110 1478110423
+VMB`5YIC]><QbW0=9XBaAJ3
+Z1 04 12 4 work check_timing fast 0
+=1-989096bd34a3-581a2cd7-106cc-16a6
+Z2 o-quiet -auto_acc_if_foreign -work work
+n@_opt
+Z3 OE;O;10.4c;61
+R0
+T_opt1
+!s110 1478100140
+VcG9i_T_jJcO`XT8UBKe4V0
+R1
+=1-989096bd34a3-581a04ac-96427-5de3
+R2
+n@_opt1
+R3
+R0
+T_opt2
+!s110 1480984492
+V2E8BVE2SHkgCPdZO`5H:^0
+04 4 4 work test fast 0
+=1-989096bd34a3-584607ac-bbef2-226c
+R2
+n@_opt2
+R3
+vcheck_timing
+Z4 DXx6 sv_std 3 std 0 22 WmjPaeP=7F5?QFXzJ>D[Q2
+!s110 1478110401
+!i10b 1
+!s100 dbRzgiK3Y]fDzK3bLi[Sf3
+I^EjceMd=L2<4[c;?AXo]Y0
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+!s105 mvm3_part1_simple_tb_sv_unit
+S1
+R0
+w1477995194
+8mvm3_part1_simple_tb.sv
+Fmvm3_part1_simple_tb.sv
+L0 6
+Z6 OE;L;10.4c;61
+r1
+!s85 0
+31
+!s108 1478110401.000000
+!s107 mvm3_part1_simple_tb.sv|
+!s90 +acc|mvm3_part1_simple_tb.sv|
+!i113 0
+Z7 o+acc -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vmemory
+R4
+!s110 1480984468
+!i10b 1
+!s100 Ki7Mon[<Hzn`UZD`JkjIz3
+I3=`mGehkGC:g@_0e]UiS@2
+R5
+Z8 !s105 mac_p2part1_sv_unit
+S1
+R0
+w1477923799
+8memory.sv
+Fmemory.sv
+L0 1
+R6
+r1
+!s85 0
+31
+Z9 !s108 1480984468.000000
+Z10 !s107 part2_mac.sv|memory.sv|mac_p2part1.sv|
+Z11 !s90 +acc|mac_p2part1.sv|
+!i113 0
+R7
+vmvm3_part1
+R4
+Z12 !s110 1480984469
+!i10b 1
+!s100 0LA4>1GHE>X7ET`bY`Z_b2
+Ic2B:<boQf0AaFVeBWTl^01
+R5
+R8
+S1
+R0
+w1480984376
+8mac_p2part1.sv
+Fmac_p2part1.sv
+L0 4
+R6
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R7
+vpart2_mac
+R4
+R12
+!i10b 1
+!s100 Z23?B^57UfNWOE1CL8KFj2
+IZa8@;1S2;dmfdgJNdQZVl0
+R5
+R8
+S1
+R0
+w1477875878
+8part2_mac.sv
+Fpart2_mac.sv
+L0 4
+R6
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R7
+vtest
+R4
+!s110 1480984481
+!i10b 1
+!s100 g??fPJ<j[b0BY]Qf];=eT2
+IF4BefA4AbUEjgBlbT5nIU1
+R5
+!s105 testbench_sv_unit
+S1
+R0
+w1480982759
+8testbench.sv
+Ftestbench.sv
+L0 6
+R6
+r1
+!s85 0
+31
+!s108 1480984481.000000
+!s107 testbench.sv|
+!s90 +acc|testbench.sv|
+!i113 0
+R7

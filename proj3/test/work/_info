@@ -1,0 +1,156 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/home5/zli/ese507work/proj3/test
+T_opt
+!s110 1480217969
+Vn11YG8c9i;hciNNF99]OA2
+04 4 4 work test fast 0
+=1-989096bc0efb-583a5571-1e685-6cc1
+o-quiet -auto_acc_if_foreign -work work
+n@_opt
+OE;O;10.4c;61
+vctrlpath
+Z1 DXx6 sv_std 3 std 0 22 WmjPaeP=7F5?QFXzJ>D[Q2
+Z2 !s110 1480217140
+!i10b 1
+!s100 1^kGYLS0HPSZ33QSPi<@:3
+IdGe?BPPE;Un[8PW3AUKJ72
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+Z4 !s105 proj22dpart32dref_sv_unit
+S1
+R0
+Z5 w1480216861
+Z6 8proj2-part3-ref.sv
+Z7 Fproj2-part3-ref.sv
+L0 94
+Z8 OE;L;10.4c;61
+r1
+!s85 0
+31
+Z9 !s108 1480217140.000000
+Z10 !s107 proj2-part3-ref.sv|
+Z11 !s90 +acc|proj2-part3-ref.sv|
+!i113 0
+Z12 o+acc -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vdatapath
+R1
+R2
+!i10b 1
+!s100 @b`W35UOiR3PzQe>jQ]5g1
+IO?7h8oioC^N=Hngn^Dk>O2
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 39
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+vmemory
+R1
+!s110 1480217899
+!i10b 1
+!s100 Ki7Mon[<Hzn`UZD`JkjIz3
+IzaPNTdfdb3cA`7JS0jQ6^0
+R3
+!s105 memory_sv_unit
+S1
+R0
+Z13 w1480216947
+8memory.sv
+Fmemory.sv
+L0 1
+R8
+r1
+!s85 0
+31
+!s108 1480217899.000000
+!s107 memory.sv|
+!s90 memory.sv|
+!i113 0
+Z14 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vmvm3_part3
+R1
+!s110 1480217896
+!i10b 1
+!s100 n^?cijR79Fk][CgdPOnmX0
+IF7Y>7828;dbS5oJBo3lGi0
+R3
+!s105 mac_p2part3_sv_unit
+S1
+R0
+R13
+8mac_p2part3.sv
+Fmac_p2part3.sv
+L0 4
+R8
+r1
+!s85 0
+31
+!s108 1480217896.000000
+!s107 part2_mac.sv|memory.sv|mac_p2part3.sv|
+!s90 mac_p2part3.sv|
+!i113 0
+R14
+vpart2_mac
+R1
+!s110 1480217905
+!i10b 1
+!s100 Z23?B^57UfNWOE1CL8KFj2
+If7;g5Ri9<><Of84<O3zZV3
+R3
+!s105 part2_mac_sv_unit
+S1
+R0
+R13
+8part2_mac.sv
+Fpart2_mac.sv
+L0 4
+R8
+r1
+!s85 0
+31
+!s108 1480217905.000000
+!s107 part2_mac.sv|
+!s90 part2_mac.sv|
+!i113 0
+R14
+vtest
+R1
+!s110 1480217952
+!i10b 1
+!s100 ;KNTZBTZXPMYM?eIJ<8e>3
+IGTH_^VeM=mgVUjDBdk:2D3
+R3
+!s105 testbench_sv_unit
+S1
+R0
+w1480217923
+8testbench.sv
+Ftestbench.sv
+L0 6
+R8
+r1
+!s85 0
+31
+!s108 1480217952.000000
+!s107 testbench.sv|
+!s90 testbench.sv|
+!i113 0
+R14

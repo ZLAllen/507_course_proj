@@ -1,0 +1,181 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/home5/zli/ese507work/proj3/generate
+T_opt
+!s110 1480294567
+VOlNiIoJ@6mJ93^ZFkl4LW1
+04 17 4 work tb_layer_3_3_1_16 fast 0
+=1-989096bd34a3-583b80a7-c36f3-2aae
+o-quiet -auto_acc_if_foreign -work work
+n@_opt
+OE;O;10.4c;61
+vctrlpath
+Z1 DXx6 sv_std 3 std 0 22 WmjPaeP=7F5?QFXzJ>D[Q2
+Z2 !s110 1480294553
+!i10b 1
+!s100 joVMacYn2K@TcfN3`6Sbe3
+I`;5]Gc7AalAVDi:kk?IcC2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+Z4 !s105 layer_3_3_1_16_sv_unit
+S1
+R0
+Z5 w1480294532
+Z6 8layer_3_3_1_16.sv
+Z7 Flayer_3_3_1_16.sv
+L0 98
+Z8 OE;L;10.4c;61
+r1
+!s85 0
+31
+Z9 !s108 1480294553.000000
+Z10 !s107 layer_3_3_1_16.sv|
+Z11 !s90 layer_3_3_1_16.sv|
+!i113 0
+Z12 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vdatapath
+R1
+R2
+!i10b 1
+!s100 T?O_d;T6PCj==AM]bEE`J2
+IRCbOYeC?foLnAY5?4AYF90
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 40
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+vlayer_3_3_1_16
+R1
+R2
+!i10b 1
+!s100 UJ>@[ohIn;0K4PcGf=QNg2
+I__fTV^>;?0O>jSZBJV=JX1
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 4
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+vlayer_3_3_1_16_B_rom
+R1
+R2
+!i10b 1
+!s100 <>1JKB=KY9Yk]9k?^nPkG0
+I1VOI@nMHTh`k0j=^Bd5TF0
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 314
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+nlayer_3_3_1_16_@b_rom
+vlayer_3_3_1_16_W_rom
+R1
+R2
+!i10b 1
+!s100 R2_h:W8aJ1HN@LVXo0R4B2
+IzCPG:OmCCVDFdlfL^ONZn1
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 295
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+nlayer_3_3_1_16_@w_rom
+vmemory
+R1
+R2
+!i10b 1
+!s100 Zj[VX5Ci7PNTNn?zbI5z71
+IG@fRefG39IbV:PXLaB=M:2
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 26
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+vtb_layer_3_3_1_16
+R1
+!s110 1480294558
+!i10b 1
+!s100 RTWSV]06VGkAmB@A5V4AX2
+IXoS]fknQ5lM0G[TAkJahL1
+R3
+!s105 tb_layer_3_3_1_16_sv_unit
+S1
+R0
+w1480294470
+8tb_layer_3_3_1_16.sv
+Ftb_layer_3_3_1_16.sv
+L0 1
+R8
+r1
+!s85 0
+31
+!s108 1480294557.000000
+!s107 tb_layer_3_3_1_16.sv|
+!s90 tb_layer_3_3_1_16.sv|
+!i113 0
+R12

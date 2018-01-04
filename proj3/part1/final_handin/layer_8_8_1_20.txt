@@ -1,0 +1,676 @@
+
+                      Design Compiler Graphical
+                            DC Ultra (TM)
+                             DFTMAX (TM)
+                         Power Compiler (TM)
+                           DesignWare (R)
+                           DC Expert (TM)
+                         Design Vision (TM)
+                          HDL Compiler (TM)
+                         VHDL Compiler (TM)
+                            DFT Compiler
+                        Library Compiler (TM)
+                         Design Compiler(R)
+
+         Version J-2014.09-SP5-2 for RHEL64 -- Jul 11, 2015
+               Copyright (c) 1988-2015 Synopsys, Inc.
+
+This software and the associated documentation are confidential and 
+proprietary to Synopsys, Inc. Your use or disclosure of this software 
+is subject to the terms and conditions of a written license agreement 
+between you, or your company, and Synopsys, Inc.
+
+Initializing...
+##############################################
+# Setup: fill out the following parameters: name of clock signal, clock period (ns),
+# reset signal name (if used), name of top-level module, name of source file
+set CLK_NAME "clk";
+clk
+set CLK_PERIOD 1;
+1
+set RST_NAME "reset";
+reset
+set TOP_MOD_NAME "layer_8_8_1_20";
+layer_8_8_1_20
+set SRC_FILE "layer_8_8_1_20.sv";
+layer_8_8_1_20.sv
+###############################################
+source setupdc.tcl
+NangateOpenCellLibrary_typical.db dw_foundation.sldb
+file mkdir work_synth
+define_design_lib WORK -path work_synth
+1
+analyze $SRC_FILE -format sverilog
+Running PRESTO HDLC
+Searching for ./layer_8_8_1_20.sv
+Compiling source file ./layer_8_8_1_20.sv
+Presto compilation completed successfully.
+Loading db file '/home/home4/pmilder/ese507/synthesis/lib/NangateOpenCellLibrary_typical.db'
+Loading db file '/usr/local/synopsys/syn/libraries/syn/dw_foundation.sldb'
+1
+elaborate -work WORK $TOP_MOD_NAME
+Loading db file '/usr/local/synopsys/syn/libraries/syn/gtech.db'
+Loading db file '/usr/local/synopsys/syn/libraries/syn/standard.sldb'
+  Loading link library 'NangateOpenCellLibrary'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'layer_8_8_1_20'.
+Information: Building the design 'datapath' instantiated from design 'layer_8_8_1_20' with
+	the parameters "8,8,20". (HDL-193)
+Warning:  ./layer_8_8_1_20.sv:70: unsigned to signed assignment occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine datapath_M8_N8_T20 line 67 in file
+		'./layer_8_8_1_20.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        f_reg        | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+| clear_acc_delay_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine datapath_M8_N8_T20 line 78 in file
+		'./layer_8_8_1_20.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      delay_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine datapath_M8_N8_T20 line 90 in file
+		'./layer_8_8_1_20.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  mul_out_save_reg   | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine datapath_M8_N8_T20 line 95 in file
+		'./layer_8_8_1_20.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    data_out_reg     | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'ctrlpath' instantiated from design 'layer_8_8_1_20' with
+	the parameters "8,8,20". (HDL-193)
+Warning:  ./layer_8_8_1_20.sv:259: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./layer_8_8_1_20.sv:267: signed to unsigned conversion occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine ctrlpath_M8_N8_T20 line 132 in file
+		'./layer_8_8_1_20.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine ctrlpath_M8_N8_T20 line 141 in file
+		'./layer_8_8_1_20.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     addr_x_reg      | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine ctrlpath_M8_N8_T20 line 152 in file
+		'./layer_8_8_1_20.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    out_count_reg    | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine ctrlpath_M8_N8_T20 line 164 in file
+		'./layer_8_8_1_20.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     addr_b_reg      | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine ctrlpath_M8_N8_T20 line 177 in file
+		'./layer_8_8_1_20.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     addr_w2_reg     | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine ctrlpath_M8_N8_T20 line 186 in file
+		'./layer_8_8_1_20.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    clear_acc_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine ctrlpath_M8_N8_T20 line 192 in file
+		'./layer_8_8_1_20.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     wr_en_y_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine ctrlpath_M8_N8_T20 line 197 in file
+		'./layer_8_8_1_20.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| clear_acc_delay_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine ctrlpath_M8_N8_T20 line 201 in file
+		'./layer_8_8_1_20.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     m_valid_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'memory' instantiated from design 'datapath_M8_N8_T20' with
+	the parameters "20,8,4". (HDL-193)
+
+Inferred memory devices in process
+	in routine memory_WIDTH20_SIZE8_LOGSIZE4 line 37 in file
+		'./layer_8_8_1_20.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    data_out_reg     | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+===========================================================================
+|         block name/line          | Inputs | Outputs | # sel inputs | MB |
+===========================================================================
+| memory_WIDTH20_SIZE8_LOGSIZE4/38 |   8    |   20    |      3       | N  |
+===========================================================================
+Presto compilation completed successfully.
+Information: Building the design 'layer_8_8_1_20_W_rom'. (HDL-193)
+Warning:  ./layer_8_8_1_20.sv:325: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_8_8_1_20.sv:326: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_8_8_1_20.sv:327: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_8_8_1_20.sv:328: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_8_8_1_20.sv:331: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_8_8_1_20.sv:332: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_8_8_1_20.sv:333: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_8_8_1_20.sv:336: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_8_8_1_20.sv:340: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_8_8_1_20.sv:341: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_8_8_1_20.sv:342: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_8_8_1_20.sv:344: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_8_8_1_20.sv:345: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_8_8_1_20.sv:347: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_8_8_1_20.sv:348: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_8_8_1_20.sv:350: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_8_8_1_20.sv:351: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_8_8_1_20.sv:356: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_8_8_1_20.sv:357: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_8_8_1_20.sv:358: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_8_8_1_20.sv:362: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_8_8_1_20.sv:363: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_8_8_1_20.sv:364: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_8_8_1_20.sv:367: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_8_8_1_20.sv:369: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_8_8_1_20.sv:370: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_8_8_1_20.sv:373: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_8_8_1_20.sv:374: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_8_8_1_20.sv:375: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_8_8_1_20.sv:377: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_8_8_1_20.sv:380: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_8_8_1_20.sv:385: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_8_8_1_20.sv:386: unsigned to signed assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 323 in file
+	'./layer_8_8_1_20.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           324            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine layer_8_8_1_20_W_rom line 323 in file
+		'./layer_8_8_1_20.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        z_reg        | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'layer_8_8_1_20_B_rom'. (HDL-193)
+Warning:  ./layer_8_8_1_20.sv:399: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_8_8_1_20.sv:401: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_8_8_1_20.sv:402: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./layer_8_8_1_20.sv:404: unsigned to signed assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 397 in file
+	'./layer_8_8_1_20.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           398            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine layer_8_8_1_20_B_rom line 397 in file
+		'./layer_8_8_1_20.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        z_reg        | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+1
+###### CLOCKS AND PORTS #######
+set CLK_PORT [get_ports $CLK_NAME]
+{clk}
+set TMP1 [remove_from_collection [all_inputs] $CLK_PORT]
+{reset s_valid m_ready data_in[19] data_in[18] data_in[17] data_in[16] data_in[15] data_in[14] data_in[13] data_in[12] data_in[11] data_in[10] data_in[9] data_in[8] data_in[7] data_in[6] data_in[5] data_in[4] data_in[3] data_in[2] data_in[1] data_in[0]}
+set INPUTS [remove_from_collection $TMP1 $RST_NAME]
+{s_valid m_ready data_in[19] data_in[18] data_in[17] data_in[16] data_in[15] data_in[14] data_in[13] data_in[12] data_in[11] data_in[10] data_in[9] data_in[8] data_in[7] data_in[6] data_in[5] data_in[4] data_in[3] data_in[2] data_in[1] data_in[0]}
+create_clock -period $CLK_PERIOD [get_ports clk]
+1
+# set delay for inputs to be 0.2ns
+set_input_delay 0.2 -max -clock clk $INPUTS
+1
+set_output_delay 0.2 -max -clock clk [all_outputs]
+1
+###### OPTIMIZATION #######
+set_max_area 0 
+1
+check_design
+ 
+****************************************
+check_design summary:
+Version:     J-2014.09-SP5-2
+Date:        Thu Dec  8 17:42:55 2016
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Cells                                                               8
+    Cells do not drive (LINT-1)                                     8
+--------------------------------------------------------------------------------
+
+Warning: In design 'datapath_M8_N8_T20', cell 'B_5' does not drive any nets. (LINT-1)
+Warning: In design 'datapath_M8_N8_T20', cell 'B_6' does not drive any nets. (LINT-1)
+Warning: In design 'ctrlpath_M8_N8_T20', cell 'C388' does not drive any nets. (LINT-1)
+Warning: In design 'ctrlpath_M8_N8_T20', cell 'C399' does not drive any nets. (LINT-1)
+Warning: In design 'ctrlpath_M8_N8_T20', cell 'C411' does not drive any nets. (LINT-1)
+Warning: In design 'ctrlpath_M8_N8_T20', cell 'C427' does not drive any nets. (LINT-1)
+Warning: In design 'ctrlpath_M8_N8_T20', cell 'B_14' does not drive any nets. (LINT-1)
+Warning: In design 'ctrlpath_M8_N8_T20', cell 'B_15' does not drive any nets. (LINT-1)
+1
+###### RUN #####
+compile
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | J-2014.09-DWBB_201409.5.2
+                                                               |     *     |
+| Licensed DW Building Blocks        | J-2014.09-DWBB_201409.5.2
+                                                               |     *     |
+============================================================================
+
+
+Information: There are 8 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'ctrlpath_M8_N8_T20'
+Information: Added key list 'DesignWare' to design 'ctrlpath_M8_N8_T20'. (DDB-72)
+Information: The register 'state_reg[3]' is a constant and will be removed. (OPT-1206)
+  Processing 'layer_8_8_1_20_B_rom'
+  Processing 'layer_8_8_1_20_W_rom'
+  Processing 'memory_WIDTH20_SIZE8_LOGSIZE4'
+  Processing 'datapath_M8_N8_T20'
+  Processing 'layer_8_8_1_20'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'ctrlpath_M8_N8_T20_DW01_inc_0'
+  Mapping 'datapath_M8_N8_T20_DW_cmp_0'
+  Processing 'datapath_M8_N8_T20_DW01_add_0'
+  Mapping 'datapath_M8_N8_T20_DW_mult_tc_0'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+Information: Added key list 'DesignWare' to design 'datapath_M8_N8_T20'. (DDB-72)
+  Mapping Optimization (Phase 1)
+  Mapping Optimization (Phase 2)
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:03    4263.2      0.54       8.7       6.1                          
+    0:00:03    4258.9      0.54       8.7       6.1                          
+    0:00:03    4258.9      0.54       8.7       6.1                          
+    0:00:03    4258.4      0.54       8.7       6.1                          
+    0:00:03    4258.4      0.54       8.7       6.1                          
+    0:00:04    3659.9      0.56       7.3       0.0                          
+    0:00:04    3669.7      0.96      21.4       0.0                          
+    0:00:04    3662.3      0.54       7.1       0.0                          
+    0:00:04    3662.8      0.53       6.9       0.0                          
+    0:00:04    3663.6      0.52       6.9       0.0                          
+    0:00:04    3663.1      0.52       6.9       0.0                          
+    0:00:04    3663.6      0.52       7.0       0.0                          
+    0:00:04    3666.0      0.55       7.7       0.0                          
+    0:00:04    3666.5      0.52       6.8       0.0                          
+    0:00:04    3668.4      0.51       6.9       0.0                          
+    0:00:04    3669.2      0.51       6.8       0.0                          
+    0:00:04    3669.2      0.51       6.8       0.0                          
+    0:00:04    3669.2      0.51       6.8       0.0                          
+    0:00:04    3669.2      0.51       6.8       0.0                          
+    0:00:04    3669.2      0.51       6.8       0.0                          
+    0:00:04    3669.2      0.51       6.8       0.0                          
+    0:00:04    3669.2      0.51       6.8       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:04    3669.2      0.51       6.8       0.0                          
+    0:00:04    3673.2      0.51       6.8       0.0 d/f_reg[19]/D            
+    0:00:04    3677.4      0.50       6.7       0.0 d/f_reg[19]/D            
+    0:00:05    3684.1      0.50       6.7       0.0 d/f_reg[19]/D            
+    0:00:05    3686.5      0.49       6.6       0.0 d/f_reg[19]/D            
+    0:00:05    3694.2      0.49       6.6       0.0 d/f_reg[19]/D            
+    0:00:05    3700.9      0.48       6.5       0.0 d/f_reg[19]/D            
+    0:00:05    3701.4      0.48       6.3       0.0 d/f_reg[19]/D            
+    0:00:05    3705.1      0.47       6.3       0.0 d/f_reg[19]/D            
+    0:00:05    3707.8      0.47       6.2       0.0 d/f_reg[19]/D            
+    0:00:05    3709.1      0.47       6.2       0.0 d/f_reg[19]/D            
+    0:00:05    3713.1      0.47       6.1       0.0                          
+    0:00:05    3711.8      0.46       5.7       0.0 d/f_reg[19]/D            
+    0:00:05    3718.9      0.45       5.6       0.0 d/f_reg[19]/D            
+    0:00:06    3719.7      0.44       5.6       0.0 d/f_reg[19]/D            
+    0:00:06    3722.9      0.44       5.7       0.0 d/f_reg[19]/D            
+    0:00:06    3722.4      0.44       5.7       0.0 d/f_reg[19]/D            
+    0:00:06    3725.1      0.44       5.6       0.0 d/f_reg[19]/D            
+    0:00:06    3727.5      0.44       5.6       0.0 d/f_reg[19]/D            
+    0:00:06    3726.9      0.44       5.6       0.0 d/f_reg[19]/D            
+    0:00:06    3732.8      0.44       5.6       0.0 d/f_reg[19]/D            
+    0:00:06    3733.8      0.43       5.6       0.0 d/f_reg[19]/D            
+    0:00:06    3735.7      0.43       5.6       0.0 d/f_reg[19]/D            
+    0:00:06    3737.8      0.43       5.6       0.0 d/f_reg[19]/D            
+    0:00:06    3740.2      0.43       5.6       0.0 d/f_reg[19]/D            
+    0:00:07    3745.0      0.43       5.6       0.0 d/f_reg[19]/D            
+    0:00:07    3746.1      0.43       5.5       0.0                          
+    0:00:07    3728.0      0.43       5.5       0.0                          
+    0:00:07    3728.3      0.42       5.5       0.0 d/f_reg[19]/D            
+    0:00:08    3733.3      0.42       5.5       0.0                          
+    0:00:08    3734.4      0.42       5.4       0.0                          
+    0:00:08    3737.3      0.42       5.4       0.0                          
+    0:00:08    3737.6      0.42       5.4       0.0                          
+    0:00:08    3740.2      0.42       5.3       0.0                          
+    0:00:08    3743.2      0.42       5.3       0.0                          
+    0:00:08    3743.9      0.42       5.2       0.0                          
+    0:00:08    3745.0      0.42       5.2       0.0                          
+
+
+  Beginning Area-Recovery Phase  (max_area 0)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:08    3745.0      0.42       5.2       0.0                          
+    0:00:08    3745.0      0.42       5.2       0.0                          
+    0:00:08    3733.0      0.42       5.2       0.0                          
+    0:00:08    3731.7      0.42       5.2       0.0                          
+    0:00:08    3731.7      0.42       5.2       0.0                          
+    0:00:08    3731.7      0.42       5.2       0.0                          
+    0:00:08    3731.7      0.42       5.2       0.0                          
+    0:00:08    3731.7      0.42       5.2       0.0                          
+    0:00:08    3725.6      0.42       5.3       0.0                          
+    0:00:08    3724.5      0.42       5.3       0.0                          
+    0:00:08    3724.5      0.42       5.3       0.0                          
+    0:00:08    3724.5      0.42       5.3       0.0                          
+    0:00:08    3724.5      0.42       5.3       0.0                          
+    0:00:08    3724.5      0.42       5.3       0.0                          
+    0:00:08    3724.5      0.42       5.3       0.0                          
+    0:00:08    3724.0      0.42       5.3       0.0                          
+    0:00:08    3704.6      0.42       5.2       0.0                          
+    0:00:09    3682.2      0.42       5.1       0.0                          
+    0:00:09    3682.2      0.42       5.1       0.0                          
+    0:00:09    3682.0      0.42       5.1       0.0                          
+    0:00:09    3682.0      0.42       5.1       0.0                          
+    0:00:09    3682.0      0.42       5.1       0.0                          
+    0:00:09    3682.0      0.42       5.1       0.0                          
+    0:00:09    3682.0      0.42       5.1       0.0                          
+    0:00:09    3682.0      0.42       5.1       0.0                          
+    0:00:09    3682.2      0.42       5.1       0.0 d/f_reg[19]/D            
+    0:00:09    3681.7      0.42       5.1       0.0                          
+    0:00:09    3681.4      0.42       5.1       0.0                          
+    0:00:09    3680.6      0.42       5.1       0.0                          
+    0:00:09    3681.4      0.42       5.1       0.0                          
+    0:00:09    3684.6      0.42       5.1       0.0                          
+    0:00:09    3683.6      0.42       5.1       0.0 d/f_reg[19]/D            
+    0:00:09    3685.2      0.42       5.1       0.0 d/f_reg[19]/D            
+    0:00:09    3688.1      0.41       5.0       0.0 d/f_reg[19]/D            
+    0:00:09    3688.6      0.41       5.1       0.0                          
+Loading db file '/home/home4/pmilder/ese507/synthesis/lib/NangateOpenCellLibrary_typical.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+1
+report_area
+ 
+****************************************
+Report : area
+Design : layer_8_8_1_20
+Version: J-2014.09-SP5-2
+Date   : Thu Dec  8 17:43:06 2016
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /home/home4/pmilder/ese507/synthesis/lib/NangateOpenCellLibrary_typical.db)
+
+Number of ports:                           46
+Number of nets:                            64
+Number of cells:                            2
+Number of combinational cells:              0
+Number of sequential cells:                 0
+Number of macros/black boxes:               0
+Number of buf/inv:                          0
+Number of references:                       2
+
+Combinational area:               2273.767997
+Buf/Inv area:                      209.076000
+Noncombinational area:            1414.853951
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                  3688.621949
+Total area:                 undefined
+1
+report_power
+Loading db file '/home/home4/pmilder/ese507/synthesis/lib/NangateOpenCellLibrary_typical.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : layer_8_8_1_20
+Version: J-2014.09-SP5-2
+Date   : Thu Dec  8 17:43:06 2016
+****************************************
+
+
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /home/home4/pmilder/ese507/synthesis/lib/NangateOpenCellLibrary_typical.db)
+
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+Design        Wire Load Model            Library
+------------------------------------------------
+layer_8_8_1_20         5K_hvratio_1_1    NangateOpenCellLibrary
+
+
+Global Operating Voltage = 1.1  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+  Cell Internal Power  =   2.0080 mW   (77%)
+  Net Switching Power  = 590.8539 uW   (23%)
+                         ---------
+Total Dynamic Power    =   2.5989 mW  (100%)
+
+Cell Leakage Power     =  77.7862 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register       1.5241e+03           85.5189        2.4628e+04        1.6342e+03  (  61.06%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational    483.9251          505.3351        5.3158e+04        1.0424e+03  (  38.94%)
+--------------------------------------------------------------------------------------------------
+Total          2.0080e+03 uW       590.8541 uW     7.7786e+04 nW     2.6766e+03 uW
+1
+report_timing
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : layer_8_8_1_20
+Version: J-2014.09-SP5-2
+Date   : Thu Dec  8 17:43:06 2016
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: d/mem_x/data_out_reg[11]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: d/f_reg[19]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  layer_8_8_1_20     5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  d/mem_x/data_out_reg[11]/CK (SDFF_X1)                   0.00       0.00 r
+  d/mem_x/data_out_reg[11]/Q (SDFF_X1)                    0.07       0.07 r
+  d/mem_x/data_out[11] (memory_WIDTH20_SIZE8_LOGSIZE4)
+                                                          0.00       0.07 r
+  d/mult_86/a[11] (datapath_M8_N8_T20_DW_mult_tc_1)       0.00       0.07 r
+  d/mult_86/U659/Z (CLKBUF_X2)                            0.05       0.12 r
+  d/mult_86/U754/Z (XOR2_X1)                              0.08       0.20 r
+  d/mult_86/U760/ZN (NAND2_X1)                            0.03       0.23 f
+  d/mult_86/U1033/ZN (OAI22_X1)                           0.05       0.28 r
+  d/mult_86/U237/S (FA_X1)                                0.13       0.41 f
+  d/mult_86/U716/ZN (NAND2_X1)                            0.03       0.45 r
+  d/mult_86/U717/ZN (NAND3_X1)                            0.04       0.49 f
+  d/mult_86/U226/S (FA_X1)                                0.14       0.63 r
+  d/mult_86/U225/S (FA_X1)                                0.12       0.75 f
+  d/mult_86/U1014/ZN (NAND2_X1)                           0.04       0.79 r
+  d/mult_86/U965/ZN (OAI21_X1)                            0.04       0.83 f
+  d/mult_86/U767/ZN (AOI21_X1)                            0.06       0.89 r
+  d/mult_86/U1158/ZN (OAI21_X1)                           0.03       0.92 f
+  d/mult_86/U985/ZN (XNOR2_X1)                            0.06       0.98 f
+  d/mult_86/product[18] (datapath_M8_N8_T20_DW_mult_tc_1)
+                                                          0.00       0.98 f
+  d/U29/Z (MUX2_X2)                                       0.07       1.05 f
+  d/add_87/A[18] (datapath_M8_N8_T20_DW01_add_2)          0.00       1.05 f
+  d/add_87/U198/ZN (INV_X1)                               0.03       1.08 r
+  d/add_87/U197/ZN (NAND2_X1)                             0.02       1.11 f
+  d/add_87/U314/ZN (AOI21_X1)                             0.04       1.14 r
+  d/add_87/U316/ZN (OAI21_X1)                             0.03       1.18 f
+  d/add_87/U321/ZN (AOI21_X1)                             0.06       1.23 r
+  d/add_87/U195/ZN (XNOR2_X1)                             0.06       1.29 r
+  d/add_87/SUM[19] (datapath_M8_N8_T20_DW01_add_2)        0.00       1.29 r
+  d/U14/ZN (INV_X1)                                       0.02       1.31 f
+  d/U12/ZN (OAI222_X1)                                    0.05       1.36 r
+  d/f_reg[19]/D (DFF_X2)                                  0.01       1.37 r
+  data arrival time                                                  1.37
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  d/f_reg[19]/CK (DFF_X2)                                 0.00       1.00 r
+  library setup time                                     -0.04       0.96
+  data required time                                                 0.96
+  --------------------------------------------------------------------------
+  data required time                                                 0.96
+  data arrival time                                                 -1.37
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.41
+
+
+1
+write -f verilog $TOP_MOD_NAME -output gates.v -hierarchy
+Writing verilog file '/home/home5/zli/ese507work/proj3/part1/gates.v'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+Warning: Verilog writer has added 20 nets to module datapath_M8_N8_T20 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+1
+quit
+
+Thank you...

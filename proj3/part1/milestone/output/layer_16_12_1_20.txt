@@ -1,0 +1,753 @@
+
+                      Design Compiler Graphical
+                            DC Ultra (TM)
+                             DFTMAX (TM)
+                         Power Compiler (TM)
+                           DesignWare (R)
+                           DC Expert (TM)
+                         Design Vision (TM)
+                          HDL Compiler (TM)
+                         VHDL Compiler (TM)
+                            DFT Compiler
+                        Library Compiler (TM)
+                         Design Compiler(R)
+
+         Version J-2014.09-SP5-2 for RHEL64 -- Jul 11, 2015
+               Copyright (c) 1988-2015 Synopsys, Inc.
+
+This software and the associated documentation are confidential and 
+proprietary to Synopsys, Inc. Your use or disclosure of this software 
+is subject to the terms and conditions of a written license agreement 
+between you, or your company, and Synopsys, Inc.
+
+Initializing...
+##############################################
+# Setup: fill out the following parameters: name of clock signal, clock period (ns),
+# reset signal name (if used), name of top-level module, name of source file
+set CLK_NAME "clk";
+clk
+set CLK_PERIOD 1;
+1
+set RST_NAME "reset";
+reset
+set TOP_MOD_NAME "layer_16_12_1_20";
+layer_16_12_1_20
+set SRC_FILE "./milestone/layer/layer_16_12_1_20.sv";
+./milestone/layer/layer_16_12_1_20.sv
+###############################################
+source setupdc.tcl
+NangateOpenCellLibrary_typical.db dw_foundation.sldb
+file mkdir work_synth
+define_design_lib WORK -path work_synth
+1
+analyze $SRC_FILE -format sverilog
+Running PRESTO HDLC
+Compiling source file ./milestone/layer/layer_16_12_1_20.sv
+Presto compilation completed successfully.
+Loading db file '/home/home4/pmilder/ese507/synthesis/lib/NangateOpenCellLibrary_typical.db'
+Loading db file '/usr/local/synopsys/syn/libraries/syn/dw_foundation.sldb'
+1
+elaborate -work WORK $TOP_MOD_NAME
+Loading db file '/usr/local/synopsys/syn/libraries/syn/gtech.db'
+Loading db file '/usr/local/synopsys/syn/libraries/syn/standard.sldb'
+  Loading link library 'NangateOpenCellLibrary'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'layer_16_12_1_20'.
+Information: Building the design 'datapath' instantiated from design 'layer_16_12_1_20' with
+	the parameters "16,12,20". (HDL-193)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:70: unsigned to signed assignment occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine datapath_M16_N12_T20 line 67 in file
+		'./milestone/layer/layer_16_12_1_20.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        f_reg        | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine datapath_M16_N12_T20 line 77 in file
+		'./milestone/layer/layer_16_12_1_20.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| clear_acc_delay_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine datapath_M16_N12_T20 line 81 in file
+		'./milestone/layer/layer_16_12_1_20.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      delay_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|   more_delay_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine datapath_M16_N12_T20 line 99 in file
+		'./milestone/layer/layer_16_12_1_20.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     mul_out_reg     | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine datapath_M16_N12_T20 line 108 in file
+		'./milestone/layer/layer_16_12_1_20.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    data_out_reg     | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'ctrlpath' instantiated from design 'layer_16_12_1_20' with
+	the parameters "16,12,20". (HDL-193)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:280: signed to unsigned conversion occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine ctrlpath_M16_N12_T20 line 145 in file
+		'./milestone/layer/layer_16_12_1_20.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine ctrlpath_M16_N12_T20 line 154 in file
+		'./milestone/layer/layer_16_12_1_20.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     addr_x_reg      | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine ctrlpath_M16_N12_T20 line 165 in file
+		'./milestone/layer/layer_16_12_1_20.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    out_count_reg    | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine ctrlpath_M16_N12_T20 line 177 in file
+		'./milestone/layer/layer_16_12_1_20.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     addr_b_reg      | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine ctrlpath_M16_N12_T20 line 190 in file
+		'./milestone/layer/layer_16_12_1_20.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     addr_w2_reg     | Flip-flop |   9   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine ctrlpath_M16_N12_T20 line 199 in file
+		'./milestone/layer/layer_16_12_1_20.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    clear_acc_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine ctrlpath_M16_N12_T20 line 205 in file
+		'./milestone/layer/layer_16_12_1_20.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     wr_en_y_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine ctrlpath_M16_N12_T20 line 210 in file
+		'./milestone/layer/layer_16_12_1_20.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| clear_acc_delay_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine ctrlpath_M16_N12_T20 line 214 in file
+		'./milestone/layer/layer_16_12_1_20.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     m_valid_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'memory' instantiated from design 'datapath_M16_N12_T20' with
+	the parameters "20,12,4". (HDL-193)
+
+Inferred memory devices in process
+	in routine memory_WIDTH20_SIZE12_LOGSIZE4 line 37 in file
+		'./milestone/layer/layer_16_12_1_20.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    data_out_reg     | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'layer_16_12_1_20_W_rom'. (HDL-193)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:339: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:340: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:342: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:344: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:348: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:350: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:353: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:354: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:355: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:356: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:358: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:362: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:363: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:368: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:370: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:371: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:372: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:373: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:374: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:376: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:377: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:378: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:379: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:380: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:381: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:385: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:387: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:391: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:393: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:395: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:397: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:398: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:399: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:400: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:401: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:403: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:404: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:408: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:409: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:411: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:412: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:414: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:415: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:418: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:421: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:422: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:423: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:424: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:427: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:428: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:429: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:430: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:431: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:432: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:439: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:441: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:442: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:443: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:444: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:447: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:448: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:451: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:453: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:456: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:457: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:458: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:461: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:462: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:464: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:465: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:467: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:469: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:470: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:474: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:475: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:476: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:478: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:480: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:481: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:483: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:485: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:486: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:489: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:491: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:492: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:494: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:497: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:500: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:501: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:502: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:503: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:506: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:507: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:508: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:512: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:513: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:516: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:517: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:519: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:520: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:521: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:522: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:525: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:526: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:528: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:529: unsigned to signed assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 336 in file
+	'./milestone/layer/layer_16_12_1_20.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           337            |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine layer_16_12_1_20_W_rom line 336 in file
+		'./milestone/layer/layer_16_12_1_20.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        z_reg        | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'layer_16_12_1_20_B_rom'. (HDL-193)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:540: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:542: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:544: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:545: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:546: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:548: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:550: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:552: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:554: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./milestone/layer/layer_16_12_1_20.sv:555: unsigned to signed assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 538 in file
+	'./milestone/layer/layer_16_12_1_20.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           539            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine layer_16_12_1_20_B_rom line 538 in file
+		'./milestone/layer/layer_16_12_1_20.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        z_reg        | Flip-flop |  20   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+1
+###### CLOCKS AND PORTS #######
+set CLK_PORT [get_ports $CLK_NAME]
+{clk}
+set TMP1 [remove_from_collection [all_inputs] $CLK_PORT]
+{reset s_valid m_ready data_in[19] data_in[18] data_in[17] data_in[16] data_in[15] data_in[14] data_in[13] data_in[12] data_in[11] data_in[10] data_in[9] data_in[8] data_in[7] data_in[6] data_in[5] data_in[4] data_in[3] data_in[2] data_in[1] data_in[0]}
+set INPUTS [remove_from_collection $TMP1 $RST_NAME]
+{s_valid m_ready data_in[19] data_in[18] data_in[17] data_in[16] data_in[15] data_in[14] data_in[13] data_in[12] data_in[11] data_in[10] data_in[9] data_in[8] data_in[7] data_in[6] data_in[5] data_in[4] data_in[3] data_in[2] data_in[1] data_in[0]}
+create_clock -period $CLK_PERIOD [get_ports clk]
+1
+# set delay for inputs to be 0.2ns
+set_input_delay 0.2 -max -clock clk $INPUTS
+1
+set_output_delay 0.2 -max -clock clk [all_outputs]
+1
+###### OPTIMIZATION #######
+set_max_area 0 
+1
+check_design
+ 
+****************************************
+check_design summary:
+Version:     J-2014.09-SP5-2
+Date:        Fri Dec  9 05:52:17 2016
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Cells                                                               9
+    Cells do not drive (LINT-1)                                     9
+--------------------------------------------------------------------------------
+
+Warning: In design 'datapath_M16_N12_T20', cell 'B_3' does not drive any nets. (LINT-1)
+Warning: In design 'datapath_M16_N12_T20', cell 'B_4' does not drive any nets. (LINT-1)
+Warning: In design 'ctrlpath_M16_N12_T20', cell 'C399' does not drive any nets. (LINT-1)
+Warning: In design 'ctrlpath_M16_N12_T20', cell 'C410' does not drive any nets. (LINT-1)
+Warning: In design 'ctrlpath_M16_N12_T20', cell 'C422' does not drive any nets. (LINT-1)
+Warning: In design 'ctrlpath_M16_N12_T20', cell 'C439' does not drive any nets. (LINT-1)
+Warning: In design 'ctrlpath_M16_N12_T20', cell 'B_14' does not drive any nets. (LINT-1)
+Warning: In design 'ctrlpath_M16_N12_T20', cell 'B_15' does not drive any nets. (LINT-1)
+Warning: In design 'ctrlpath_M16_N12_T20', cell 'B_16' does not drive any nets. (LINT-1)
+1
+###### RUN #####
+compile
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | J-2014.09-DWBB_201409.5.2
+                                                               |     *     |
+| Licensed DW Building Blocks        | J-2014.09-DWBB_201409.5.2
+                                                               |     *     |
+============================================================================
+
+
+Information: There are 9 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'ctrlpath_M16_N12_T20'
+Information: Added key list 'DesignWare' to design 'ctrlpath_M16_N12_T20'. (DDB-72)
+Information: The register 'state_reg[3]' is a constant and will be removed. (OPT-1206)
+  Processing 'layer_16_12_1_20_B_rom'
+  Processing 'layer_16_12_1_20_W_rom'
+  Processing 'memory_WIDTH20_SIZE12_LOGSIZE4'
+  Processing 'datapath_M16_N12_T20'
+  Processing 'layer_16_12_1_20'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'ctrlpath_M16_N12_T20_DW01_inc_0'
+  Processing 'ctrlpath_M16_N12_T20_DW01_inc_1'
+  Processing 'ctrlpath_M16_N12_T20_DW01_inc_2'
+  Mapping 'ctrlpath_M16_N12_T20_DW_cmp_0'
+  Mapping 'datapath_M16_N12_T20_DW_cmp_0'
+  Processing 'datapath_M16_N12_T20_DW01_add_0'
+  Mapping 'datapath_M16_N12_T20_DW_mult_tc_0'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+Information: Added key list 'DesignWare' to design 'datapath_M16_N12_T20'. (DDB-72)
+  Mapping Optimization (Phase 1)
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:06    5369.7      0.27      14.1       0.0                          
+    0:00:06    5365.5      0.27      14.1       0.0                          
+    0:00:06    5365.5      0.27      14.1       0.0                          
+    0:00:06    5362.3      0.27      14.1       0.0                          
+    0:00:06    5362.3      0.27      14.1       0.0                          
+    0:00:07    4396.4      0.27       6.6       0.0                          
+    0:00:07    4394.6      0.25       4.9       0.0                          
+    0:00:07    4398.0      0.24       4.7       0.0                          
+    0:00:07    4401.5      0.23       4.5       0.0                          
+    0:00:07    4405.8      0.23       4.4       0.0                          
+    0:00:07    4408.4      0.21       4.2       0.0                          
+    0:00:07    4408.7      0.21       4.2       0.0                          
+    0:00:07    4407.9      0.21       4.2       0.0                          
+    0:00:07    4409.5      0.21       4.2       0.0                          
+    0:00:07    4409.5      0.21       4.2       0.0                          
+    0:00:07    4409.5      0.21       4.2       0.0                          
+    0:00:07    4409.5      0.21       4.2       0.0                          
+    0:00:07    4409.5      0.21       4.2       0.0                          
+    0:00:07    4409.5      0.21       4.2       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:07    4409.5      0.21       4.2       0.0                          
+    0:00:08    4415.1      0.19       4.2       0.0 d/mul_out_reg[17]/D      
+    0:00:08    4420.7      0.19       4.2       0.0 d/mul_out_reg[17]/D      
+    0:00:08    4425.4      0.18       4.2       0.0 d/mul_out_reg[15]/D      
+    0:00:08    4426.0      0.18       4.1       0.0 d/mul_out_reg[19]/D      
+    0:00:08    4434.5      0.17       4.1       0.0 d/mul_out_reg[17]/D      
+    0:00:08    4438.5      0.17       4.0       0.0 d/mul_out_reg[17]/D      
+    0:00:08    4439.0      0.17       4.0       0.0 d/mul_out_reg[15]/D      
+    0:00:08    4445.1      0.16       4.1       0.0 d/mul_out_reg[15]/D      
+    0:00:08    4448.3      0.16       4.0       0.0 d/mul_out_reg[19]/D      
+    0:00:08    4448.3      0.16       4.0       0.0 d/mul_out_reg[15]/D      
+    0:00:08    4448.8      0.16       4.0       0.0 d/mul_out_reg[15]/D      
+    0:00:08    4450.2      0.16       4.0       0.0                          
+    0:00:09    4432.1      0.16       4.0       0.0                          
+    0:00:09    4434.2      0.15       3.8       0.0 d/mem_w/z_reg[3]/D       
+    0:00:09    4434.8      0.15       3.8       0.0 d/mul_out_reg[15]/D      
+    0:00:09    4437.7      0.15       3.7       0.0 d/mul_out_reg[15]/D      
+    0:00:09    4439.5      0.15       3.6       0.0 d/mem_w/z_reg[0]/D       
+    0:00:09    4440.6      0.15       3.5       0.0 d/mul_out_reg[15]/D      
+    0:00:09    4439.5      0.14       3.5       0.0 d/mul_out_reg[19]/D      
+    0:00:09    4440.6      0.14       3.5       0.0                          
+    0:00:09    4440.1      0.14       3.5       0.0                          
+    0:00:09    4444.9      0.14       3.4       0.0                          
+    0:00:09    4448.1      0.14       3.4       0.0                          
+    0:00:09    4450.2      0.14       3.3       0.0                          
+    0:00:09    4452.6      0.14       3.2       0.0                          
+    0:00:09    4453.6      0.14       3.1       0.0                          
+    0:00:10    4456.8      0.14       2.8       0.0                          
+
+
+  Beginning Area-Recovery Phase  (max_area 0)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:10    4456.8      0.14       2.8       0.0                          
+    0:00:10    4456.8      0.14       2.8       0.0                          
+    0:00:10    4447.0      0.14       2.7       0.0                          
+    0:00:10    4444.3      0.14       2.7       0.0                          
+    0:00:10    4444.3      0.14       2.7       0.0                          
+    0:00:10    4444.3      0.14       2.7       0.0                          
+    0:00:10    4444.3      0.14       2.7       0.0                          
+    0:00:10    4444.3      0.14       2.7       0.0                          
+    0:00:10    4433.2      0.14       2.7       0.0                          
+    0:00:10    4431.3      0.14       2.7       0.0                          
+    0:00:10    4430.8      0.14       2.7       0.0                          
+    0:00:10    4430.8      0.14       2.7       0.0                          
+    0:00:10    4430.8      0.14       2.7       0.0                          
+    0:00:10    4430.8      0.14       2.7       0.0                          
+    0:00:10    4430.8      0.14       2.7       0.0                          
+    0:00:10    4430.8      0.14       2.7       0.0                          
+    0:00:10    4430.0      0.14       2.7       0.0 d/mul_out_reg[19]/D      
+    0:00:10    4432.6      0.14       2.7       0.0 d/mul_out_reg[19]/D      
+    0:00:10    4434.0      0.14       2.7       0.0 d/mul_out_reg[19]/D      
+    0:00:10    4435.8      0.13       2.7       0.0 d/mul_out_reg[19]/D      
+    0:00:10    4436.6      0.13       2.7       0.0 d/mul_out_reg[19]/D      
+    0:00:10    4419.3      0.13       2.7       0.0                          
+    0:00:10    4398.3      0.13       2.7       0.0                          
+    0:00:10    4397.0      0.13       2.7       0.0                          
+    0:00:10    4395.6      0.13       2.7       0.0                          
+    0:00:10    4395.6      0.13       2.7       0.0                          
+    0:00:10    4395.6      0.13       2.7       0.0                          
+    0:00:10    4395.6      0.13       2.7       0.0                          
+    0:00:10    4395.6      0.13       2.7       0.0                          
+    0:00:10    4395.6      0.13       2.7       0.0                          
+    0:00:10    4400.4      0.13       2.7       0.0 d/mul_out_reg[19]/D      
+    0:00:11    4402.6      0.13       2.7       0.0 d/mul_out_reg[19]/D      
+    0:00:11    4403.9      0.13       2.7       0.0 d/mul_out_reg[19]/D      
+    0:00:11    4408.7      0.13       2.7       0.0 d/mul_out_reg[19]/D      
+    0:00:11    4412.9      0.13       2.6       0.0 d/mul_out_reg[19]/D      
+    0:00:11    4413.7      0.13       2.6       0.0 d/mul_out_reg[18]/D      
+    0:00:11    4412.1      0.13       2.6       0.0 d/mul_out_reg[19]/D      
+    0:00:11    4412.9      0.13       2.6       0.0 d/mul_out_reg[19]/D      
+    0:00:11    4411.3      0.13       2.6       0.0                          
+    0:00:11    4411.3      0.13       2.6       0.0                          
+    0:00:11    4410.3      0.13       2.5       0.0 d/mul_out_reg[19]/D      
+    0:00:11    4411.1      0.13       2.5       0.0 d/mul_out_reg[19]/D      
+    0:00:11    4411.3      0.13       2.5       0.0                          
+Loading db file '/home/home4/pmilder/ese507/synthesis/lib/NangateOpenCellLibrary_typical.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+1
+report_area
+ 
+****************************************
+Report : area
+Design : layer_16_12_1_20
+Version: J-2014.09-SP5-2
+Date   : Fri Dec  9 05:52:29 2016
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /home/home4/pmilder/ese507/synthesis/lib/NangateOpenCellLibrary_typical.db)
+
+Number of ports:                           46
+Number of nets:                            66
+Number of cells:                            2
+Number of combinational cells:              0
+Number of sequential cells:                 0
+Number of macros/black boxes:               0
+Number of buf/inv:                          0
+Number of references:                       2
+
+Combinational area:               2632.070016
+Buf/Inv area:                      362.824002
+Noncombinational area:            1779.273936
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                  4411.343952
+Total area:                 undefined
+1
+report_power
+Loading db file '/home/home4/pmilder/ese507/synthesis/lib/NangateOpenCellLibrary_typical.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : layer_16_12_1_20
+Version: J-2014.09-SP5-2
+Date   : Fri Dec  9 05:52:29 2016
+****************************************
+
+
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /home/home4/pmilder/ese507/synthesis/lib/NangateOpenCellLibrary_typical.db)
+
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+Design        Wire Load Model            Library
+------------------------------------------------
+layer_16_12_1_20       5K_hvratio_1_1    NangateOpenCellLibrary
+
+
+Global Operating Voltage = 1.1  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+  Cell Internal Power  =   2.2668 mW   (82%)
+  Net Switching Power  = 487.1382 uW   (18%)
+                         ---------
+Total Dynamic Power    =   2.7539 mW  (100%)
+
+Cell Leakage Power     =  91.1866 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register       1.8701e+03           77.5251        3.0954e+04        1.9786e+03  (  69.54%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational    396.6794          409.6133        6.0233e+04          866.5250  (  30.46%)
+--------------------------------------------------------------------------------------------------
+Total          2.2668e+03 uW       487.1384 uW     9.1187e+04 nW     2.8451e+03 uW
+1
+report_timing
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : layer_16_12_1_20
+Version: J-2014.09-SP5-2
+Date   : Fri Dec  9 05:52:29 2016
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: d/mem_x/data_out_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: d/mul_out_reg[19]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  layer_16_12_1_20   5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  d/mem_x/data_out_reg[1]/CK (DFF_X1)                     0.00       0.00 r
+  d/mem_x/data_out_reg[1]/Q (DFF_X1)                      0.08       0.08 f
+  d/mem_x/data_out[1] (memory_WIDTH20_SIZE12_LOGSIZE4)
+                                                          0.00       0.08 f
+  d/mult_101/a[1] (datapath_M16_N12_T20_DW_mult_tc_1)     0.00       0.08 f
+  d/mult_101/U723/Z (CLKBUF_X1)                           0.04       0.13 f
+  d/mult_101/U672/Z (BUF_X1)                              0.04       0.17 f
+  d/mult_101/U1165/ZN (XNOR2_X1)                          0.06       0.23 f
+  d/mult_101/U971/ZN (OAI22_X1)                           0.05       0.28 r
+  d/mult_101/U1171/Z (XOR2_X1)                            0.07       0.35 r
+  d/mult_101/U933/ZN (XNOR2_X1)                           0.06       0.41 r
+  d/mult_101/U932/ZN (XNOR2_X1)                           0.06       0.48 r
+  d/mult_101/U991/ZN (XNOR2_X1)                           0.06       0.54 r
+  d/mult_101/U990/ZN (XNOR2_X1)                           0.06       0.60 r
+  d/mult_101/U189/Z (XOR2_X1)                             0.07       0.66 r
+  d/mult_101/U794/ZN (XNOR2_X1)                           0.06       0.73 r
+  d/mult_101/U793/ZN (XNOR2_X1)                           0.06       0.79 r
+  d/mult_101/U792/ZN (XNOR2_X1)                           0.06       0.85 r
+  d/mult_101/U791/ZN (XNOR2_X1)                           0.06       0.91 r
+  d/mult_101/U790/ZN (OR2_X1)                             0.04       0.94 r
+  d/mult_101/U1056/ZN (NAND2_X1)                          0.03       0.97 f
+  d/mult_101/U994/ZN (XNOR2_X1)                           0.05       1.03 f
+  d/mult_101/product[19] (datapath_M16_N12_T20_DW_mult_tc_1)
+                                                          0.00       1.03 f
+  d/U10/ZN (NAND2_X1)                                     0.03       1.05 r
+  d/U12/ZN (NAND2_X1)                                     0.03       1.08 f
+  d/mul_out_reg[19]/D (DFF_X1)                            0.01       1.09 f
+  data arrival time                                                  1.09
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  d/mul_out_reg[19]/CK (DFF_X1)                           0.00       1.00 r
+  library setup time                                     -0.04       0.96
+  data required time                                                 0.96
+  --------------------------------------------------------------------------
+  data required time                                                 0.96
+  data arrival time                                                 -1.09
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.13
+
+
+1
+write -f verilog $TOP_MOD_NAME -output gates.v -hierarchy
+Writing verilog file '/home/home5/zli/ese507work/proj3/part1/gates.v'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+Warning: Verilog writer has added 20 nets to module datapath_M16_N12_T20 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+1
+quit
+
+Thank you...
